@@ -1,0 +1,22 @@
+
+<!-- standard header for berczuk.com site -->
+<!-- header Time-stamp: "2002-10-05 15:19:27 default@SPBVAIO"-->
+<!--#set var="RootLink" value="SCM Patterns Home" -->
+<table>
+<tr>
+<td class="navbar" valign="top">
+
+<a class="navbar" href="#BOOK" title="SCM Patterns">
+The Book</a>&nbsp;|&nbsp;
+<a class="navbar" href="PatternSummaries.html" title="patterns">The Patterns</a>&nbsp;|&nbsp;
+<a class="navbar" href="#COMMUNITY" title="Community">Community</a>&nbsp;|&nbsp;
+</td></tr>
+<tr>
+<td>
+<!--#echo var="RootLink" -->
+</td>
+</tr>
+
+
+</tr>
+</table>

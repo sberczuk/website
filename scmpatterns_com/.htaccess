@@ -1,0 +1,2 @@
+ErrorDocument 404 http://www.scmpatterns.com/404.shtml
+ErrorDocument 500 http://www.scmpatterns.com/500.shtml

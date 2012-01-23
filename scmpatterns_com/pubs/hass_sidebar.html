@@ -1,0 +1,423 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd ">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!--#include virtual="/scmsite_head.html"-->
+<!--#set var="page_path" value="SCMHOME-PUBS"-->
+<!--#set var="pagetitle" value="Agile SCM"-->
+<!-- Time-stamp: "2002-11-21 14:02:18 default@OZCHECK" -->
+<title><!--#echo var="pagetitle"--></title>
+
+
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Frutiger-Black;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Times;
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:Times;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+<!--#include virtual="/scm_navbar.html" -->
+
+<!--
+<div class=Section1> -->
+<div class="bodytext">
+<h1><!--#echo var="pagetitle"--></h1>
+<table>
+<tr>
+<td><p>
+<a HREF="http://www.amazon.com/exec/obidos/ASIN/0321117662/steveberczuk">
+<img SRC="hassbook_cover.jpg" border="0" alt="cover" hspace="3" vspace="3"></A></td>
+<td valign="top">
+<em>This article originally appeared in</em>  
+<a href="http://www.amazon.com/exec/obidos/ASIN/0321117662/steveberczuk">Configuration Management Principles and Practice</a><em>
+by Anne Mette Jonassen Hass. Published by Addison Wesley, copyright
+2003. All references to &quot;this book&quot; in the below text refer
+to</em> Configuration Management Principles and Practice. <br/>
+</p>
+<p>For more information on what <em>Agile SCM</em> is refer to the <a
+href="http://www.cmcrossroads.com/cgi-bin/cmwiki/bin/view.cgi/CM/AgileSCM">Agile</a>
+page on the <a href="http://www.cmwiki.com/">CM Crossroads Wiki</a>.
+</p>
+</td>
+
+</tr>
+ 
+</table>
+
+<hr/>
+<p class=MsoNormal><b><i><span style='font-size:20.0pt;font-family:Frutiger-Black'>Appendix
+C</span></i></b></p>
+
+<p class=MsoNormal><i><span style='font-size:10.5pt;font-family:Frutiger-Black'>by
+Stephen P. Berczuk and Brad Appleton </span></i></p>
+
+<p class=MsoNormal><span style='font-size:8.0pt;font-family:Frutiger-Black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:8.0pt;font-family:Frutiger-Black'>Adapted,
+with permission, from Stephen P. Berczuk and Brad Appleton. 2003. <i>Software
+Configuration Management Patterns: Effective Teamwork, Practical Integration</i>.
+</span><span style='font-size:8.0pt;font-family:Frutiger-Black'>Boston</span><span
+style='font-size:8.0pt;font-family:Frutiger-Black'>: Addison-Wesley. </span></p>
+
+<p class=MsoNormal><b><span style='font-size:9.5pt;font-family:Frutiger-Black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>Software
+Configuration Management (SCM) is crucial to the success of agile projects. A
+team without effective SCM practices gets slowed down by the extra work each
+developer must perform when there is no easy way of synching up with his or her
+teammates. A well-designed and light SCM process actually speeds up the
+project. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>This appendix is divided into two sections. In the
+first section, we identify key strategies, or <i>patterns</i>, that should
+allow the agile team to stay safe with an ultralight selection of SCM practices.</span><span
+style='font-size:8.5pt;font-family:Frutiger-Black'>1 </span><span
+style='font-size:10.5pt;font-family:Frutiger-Black'>In the second section, we
+describe how the SCM terms in this book map to the practices of the common
+agile project. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>The key to understanding the agile mappings is to
+recall that agile projects rely on good, two-way dialogue with the user; delivery
+of running, tested code every two to twelve weeks; and frequent, early feedback
+on the quality of both the requirements and the design. With this three-layered
+safety net in place the following mappings become effective. </span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.5pt;font-family:Frutiger-Black'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.5pt;font-family:Frutiger-Black'>Keeping
+Agile Projects Safe </span></i></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.5pt;font-family:Frutiger-Black'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>There
+are many aspects of SCM that are relevant to the agile project —the difficult
+part is knowing when to apply them. We want agility, not chaos. Some practices
+work together to build an effective development environment with the right
+amount of SCM practice. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>Your agile project should use a simple branching
+structure. Branches of development for a configuration item’s source-code
+library files are commonly called <i>codelines</i>. One or two codelines are
+usually sufficient for agile projects that don’t require multiple parallel
+releases or variants. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>The key concepts for organizing the evolution of
+your code are: a <i>Mainline</i>, an <i>Active Development Line</i>, and a <i>Release
+Line</i>. A <i>Mainline </i>is the single, central codeline that controlled
+library artifacts are checked in to. Having a single integration point makes it
+easy to re-create the latest state of the SCM-controlled items. An <i>Active
+Development Line </i>is a codeline that is set up with a <i>Codeline Policy </i>that
+permits ongoing work to be checked in without overly rigorous precheck-in
+validation. A <i>Release Line </i>is a codeline for system states that are
+available to customers for fixing system problems in preparation for your
+regular release cycle. A <i>Release Line </i>has a more restrictive <i>Codeline
+Policy </i>that ensures stability. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>Having a <i>Release Line </i>simplifies the SCM
+rules and allows you to be a little less strict on the check-in policies for
+the <i>Active Development Line</i>. With these two separate codelines in place,
+the developers can make their hourly or daily changes into the <i>Active
+Development Line</i>, and the customer-release process can use the more
+carefully controlled <i>Release Line</i>. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>Here is what a typical agile developer’s day looks
+like in terms of the SCM strategies or patterns they use: </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>Each developer works in a <i>Private Workspace </i>that
+contains the code that the developer is working on, populated from a <i>Repository—</i>a
+single point of access for everything that a developer needs to build his or
+her project. The developer gets external components from a <i>Third Party
+Codeline</i>. If he or she does not want to build the entire system from
+scratch, the developer can populate some of their workspace from an <i>Integration
+Build</i>, which is a snapshot of the codeline. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>The developer, progressing through the day, will
+check changes into the <i>Active Development Line </i>so that they are visible
+to the rest of the team, as well as available for the integration build.
+Because the codeline isn’t required to be bullet-proof, the developer does not
+need to run exhaustive tests before checking changes in. But he or she should
+create a <i>Private System Build</i>, which is just like the <i>Integration
+Build</i>, and run a <i>Smoke Test </i>on the result to make sure that the
+check-in will not cause any problems. Since this cycle repeats with every
+developer, the current state of the system is available in the <i>Integration
+Build</i>. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>The codeline may have mistakes in it, but they
+should be few and minor. The team relies on the <i>Smoke Test </i>to catch
+show-stopper defects and on <i>Unit Tests </i>to ensure that changes don’t
+change any interface behavior for the module that the developer is testing.
+After the <i>Integration Build</i>, the <i>Regression Tests</i>, as well as the
+full suite of <i>Unit Tests</i>, are run to catch integration issues. It is a
+trade-off, but it’s a reasonable one, since the only way to ensure a pure
+codeline would be to have a developer lock the entire codeline, run a full
+suite of tests, check in the changes, and then unlock the codeline. This
+approach would severely limit progress, and for agile projects you realize more
+value from changes in functionality early on. Once the project reaches a
+certain milestone, the code can be branched onto a <i>Release Line</i>, where a
+more restrictive <i>Codeline Policy </i>may be in effect. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.5pt;font-family:Frutiger-Black'>Mapping
+Terms for the Agile Project </span></i></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.5pt;font-family:Frutiger-Black'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>With
+those strategies in place, we can examine the main concepts in this book that
+need to be mapped for an agile project: </span><span style='font-size:7.0pt;
+font-family:Frutiger-Black'>• </span><span style='font-size:10.5pt;font-family:
+Frutiger-Black'>Change Control </span><span style='font-size:7.0pt;font-family:
+Frutiger-Black'>• </span><span style='font-size:10.5pt;font-family:Frutiger-Black'>Identification
+and Storage </span><span style='font-size:7.0pt;font-family:Frutiger-Black'>• </span><span
+style='font-size:10.5pt;font-family:Frutiger-Black'>Change Authorization </span><span
+style='font-size:7.0pt;font-family:Frutiger-Black'>• </span><span
+style='font-size:10.5pt;font-family:Frutiger-Black'>Integration and Build
+Management </span><span style='font-size:7.0pt;font-family:Frutiger-Black'>• </span><span
+style='font-size:10.5pt;font-family:Frutiger-Black'>Status Reporting </span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.5pt;font-family:Frutiger-Black'>Change
+Control </span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.5pt;font-family:Frutiger-Black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>Change
+control starts on Day One of an agile project! In two-way dialog with the user,
+customer or executive sponsors, the agile team elicits requirements in the form
+of feature requests and user scenarios. These requests may be for brand-new
+functionality, or for changes or additions to already implemented
+functionality. Developers estimate each requested chunk of functionality, and
+the customer then gives priorities for the features to work on over the next
+iteration. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>Agile iterations are typically short (two to twelve
+weeks), so there aren’t usually many features to track for a given iteration.
+Requirements are managed by keeping track of the list of features for the
+current iteration, and a current backlog of requested but not yet implemented
+features. At the end of an iteration, the current backlog of requests, along
+with any new requests, are once again prioritized by the customer so that the
+developer can decide which set of features will be worked on during the next
+iteration. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>This frequent reprioritization and selection process
+is the most common agile equivalent of a change control board (CCB). The
+customer drives the priorities and need for change while development
+accommodates those needs as much as possible in each iteration, focusing almost
+exclusively on the features for the current iteration. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>In some cases, the features or change requests are
+written to the change-control system. In more informal projects, particularly
+Extreme Programming projects, requests are documented on a four-inch by
+six-inch white index card or two-foot by four-foot flipchart taped to the wall,
+whose text is updated throughout the iteration period, so that everyone who
+reads it sees the original request and the modifications that have been made to
+it. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.5pt;font-family:Frutiger-Black'>Identification
+and Storage </span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.5pt;font-family:Frutiger-Black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>Identification
+of configuration items is typically done with text and source code repositories
+using commercial and open-source version control tools such as CVS, Visual
+Source-Safe, Perforce, BitKeeper, and simple out-of-the-box installations of
+higher-end tools like ClearCase. Items are checked-out of and checked-in to
+controlled library storage (the <i>Repository </i>or “code base”) to and from a
+dynamic storage library called the developer’s <i>Private Workspace</i>. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>A brief textual description is typically created to
+convey the overall source-code directory structure of the code base. Build
+scripts such as Makefiles or ANT recipes, along with the instructions necessary
+to successfully build the system with minimal recompilation, describe physical
+build-dependencies. Any special configuration files, or external tools,
+libraries, or databases required to build, install, or upgrade the software are
+often checked-in directly to the <i>Repository</i>, or else separately archived
+and versioned with noted dependencies of the corresponding compatible
+version(s) of the code base. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>Releases and significant build milestones are
+identified in the code base using the “tag” or “label” facilities of the
+version control tool. The label makes it possible to reproducibly identify
+every revision of every file in the <i>Repository </i>that participated in the
+build or release. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>The metadata maintained by the version control <i>Repository</i>,
+combined with the physical code structure description, and build and dependency
+information is typically sufficient identification for the agile project. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.5pt;font-family:Frutiger-Black'>Change
+Authorization </span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.5pt;font-family:Frutiger-Black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>The
+developer on the agile project is authorized to change the source code in two
+cases: </span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>1.
+To implement an agreed-upon feature for the current iteration. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>2.
+To improve the simplicity (readability and maintainability) of the source code.
+</span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>Agile development teams work hard—as a matter of
+principle and through peer pressure—to develop only what the customer has
+requested for the current iteration, and to keep the design simple. They also
+are working in short iterations, and so they have less time in which to
+gold-plate their design. These factors together have the effect that very few
+gratuitous features get put into the code, which reduce the worries surrounding
+development change control. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>Agile teams are typically authorized to make small <i>refactoring
+</i>changes at any time without prior management approval, provided that the
+code complies with team-defined coding conventions and continues to pass all
+the same tests as before. (<i>Refactoring </i>is revising the code structure
+without changing its functionality.) </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>Development change control is often informal. The
+source-code control system marks the changes, and may perform change
+notification automatically upon checkin or check-out. Changes are announced by
+e-mail between developers, or word-ofmouth when teams sit together. This works
+because of the small amount of goldplating, the short iterations, the close
+contact between developers and good testing habits. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.5pt;font-family:Frutiger-Black'>Integration
+and Build Management </span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.5pt;font-family:Frutiger-Black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>Agile
+teams work in short and frequent small releases, and even more frequent
+integration and building. Developers run <i>Unit Tests </i>and perform <i>Private
+System Builds</i>, and <i>Smoke Tests </i>before committing changes from their <i>Private
+Workspace </i>to the <i>Active Development Line</i>. <i>Integration Builds </i>must
+pass <i>Regression Tests </i>and may be rebuilt from scratch (to ensure build
+reproducibility) before being required to pass functional acceptance tests. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>XP
+preaches continuous integration, in which changes are integrated many times a
+day or even several times each hour. Since the changes are very small and
+comprise the smallest possible set of consistent files for a testable chunk of
+functionality, the time to integrate and incrementally rebuild the system is
+very small. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>Non-XP agile teams tend to build and integrate
+every day or two, often running a daily or nightly build that checks for build
+failures and immediately reports the results. If a build breaks, fixing the
+build becomes development’s top priority. Since all developers are typically required
+to do a <i>Private System Build </i>of their changes before check-in and ensure
+the code passes their unit and regression tests, broken builds tend to be
+infrequent due to such disciplined testing on such small sets of changes. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.5pt;font-family:Frutiger-Black'>Status
+Reporting </span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt;font-family:Frutiger-Black'>A
+report of physical contents usually includes version label names and a manifest
+(or packing list) of all the files in the released build. In addition, a file
+name and revision ID is often maintained in each source-file. This enables
+(with help from the version control tool) reporting of a bill-of-materials
+(BOM) listing all the source- file names and revision numbers that were used to
+build the target executables and libraries. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>A report of functional content usually includes all
+the features/requests that were implemented for an iteration. Each developed
+feature is typically associated with one or more tests that verify its proper
+implementation (for development) and functionality (for customer acceptance).
+Once again, simplicity is preferred in tracking tests to features: each
+functional test is associated with a named feature in a spreadsheet or simple
+tracking database, or on index cards (perhaps even on the back-side of
+corresponding story-card). Sometimes the functional test is expressed
+exclusively in the source code (and comments) that exercises functionality
+under test. Tests are automated to the greatest extent possible and stored as a
+regression test-suite that is run after every build. Testing results/status are
+usually reported with each delivered version of the software. </span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.5pt;
+font-family:Frutiger-Black'>Some agile teams use a spreadsheet to track
+feature-lists and backlogs, or a simple database to track the requests. Some
+teams use simple out-of-the-box request/defect tracking systems or open source
+systems, the most popular of which at this time are Bugzilla, GNATs, and
+Jitterbug. In either case, the tracking system (or mechanism) can easily be
+used to sort and report requests by date, priority, estimate, and target
+iteration/release. These systems enable the agile team to report the status of implemented,
+and to-be-implemented, functional requests for any iteration.</span><span
+style='font-family:Frutiger-Black'> </span> </p>
+</div>
+
+
+</body>
+
+</html>

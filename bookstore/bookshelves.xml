@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="book-index.xsl"?>
+<!DOCTYPE bookshelves SYSTEM "categories.dtd" >
+
+<bookshelves>
+
+
+<!-- Current Favorites should always be first in this file -->
+<bookshelf>
+<name>Current Selections</name>
+<description>Books that I recently read or that seem relevant at the moment.</description>
+	<isbnlist>
+		<isbn>0201741571</isbn>
+		<isbn>0932633536</isbn>
+		<isbn>1932394230</isbn>
+		<isbn>0743249275</isbn>
+		<isbn>0321125215</isbn>
+		 <isbn>0131467409</isbn>
+	</isbnlist>
+</bookshelf>
+
+
+<bookshelf>
+<name>Essentials</name>
+<description>Books that everyone should read.</description>
+<isbnlist>
+	<isbn>0060920432</isbn>
+     <isbn>0932633161</isbn>
+	<isbn>0140157352</isbn>
+	<isbn>0932633013</isbn>
+	<isbn>020172183x</isbn>
+</isbnlist>
+</bookshelf>
+
+<bookshelf>
+<name>Essential Patterns</name>
+<description>If you want to understand patterns.</description>
+<isbnlist>
+ 	<isbn>0195019199</isbn>
+    <isbn>0195024028</isbn>
+	<isbn>0195018249</isbn>
+    <isbn>0201633612</isbn>
+	<isbn>0140139966</isbn>
+
+</isbnlist>
+</bookshelf>
+
+<bookshelf>
+<name>Agile Software Development</name>
+<description>Essential Agile Software Development Resources</description>
+<isbnlist>
+<isbn>0131479415</isbn>
+    <isbn>0201741172</isbn>
+     <isbn>073561993X</isbn>
+     <isbn>0321278658</isbn>
+</isbnlist>
+</bookshelf>
+
+<bookshelf>
+<name>Fixing Communication Problems. Better Leadership.</name>
+<description>Advice on how to avoid and fix communication problems.</description>
+<isbnlist>
+<isbn>0976694026</isbn>
+	<isbn>0932633536</isbn> 
+      	<isbn>014028852X</isbn>
+      <isbn>0932633021</isbn>
+</isbnlist>
+</bookshelf>
+
+<bookshelf>
+<name>Organization Patterns</name>
+<description>Patterns to help you make your organization work better.</description>
+<isbnlist>
+	<isbn>0201741571</isbn>
+      <isbn>0131467409</isbn>
+	<isbn>0201741172</isbn>
+</isbnlist>
+</bookshelf>
+
+</bookshelves>

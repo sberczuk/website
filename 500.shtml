@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="/scm_site.css"
+  title="Steve B Style Sheet">
+
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+      <!-- Time-stamp: "2002-09-09 08:32:46 default@SPBVAIO"-->     
+          
+<!--#include file="scmsite_head.html"-->
+<!--#set var="page_path" value="SCMHOME-" -->
+<!--#set var="pagetitle" value="500 Server Error"-->
+<title><!--#echo var="pagetitle" --></title>
+</head>
+<body>
+<!--#include virtual="scm_navbar.html" -->         
+   
+<div class="bodytext">    
+<h1><!--#echo var="pagetitle" --></h1>
+<p>There was a error getting the page &quot;<!--#echo
+var="REQUEST_URI"-->&quot;. Consult the server error log.  The server
+environment is below for reference. </p>
+
+<p><em><!--#echo var="REDIRECT_ERROR_NOTES" --></em></p>
+
+<h2>Server Environment</h2>
+<pre>
+<!--#printenv -->
+</pre>
+
+<p>Return to the <a href="/">Home page</a>.
+   </div>
+   
+</body>
+</html>

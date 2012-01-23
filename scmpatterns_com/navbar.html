@@ -1,0 +1,101 @@
+
+<!-- standard header for pages below top of berczuk.com site -->
+<!-- sub header Time-stamp: "2003-07-20 20:50:16 Stephen Berczuk@ALEWIFE-BROOK"-->
+
+<!-- To use this SSI Template define the following variables:
+     pagetitle: The title of the current page
+     page_path: The path to this page in terms of the following
+     sitemap locations:
+       SCMHOME, BOOK
+    for example: SCMHOME-BOOK 
+-->
+
+
+<!-- standard header for scm patterns site -->
+<!-- header Time-stamp: "2002-10-15 11:18:01 default@OZCHECK"-->
+
+<!--#set var="RootLink" value="SCM Patterns Home"-->
+
+<table width="100%" class="navarea">
+<tr>
+<td class="navbar" valign="top">
+<a class="navbar" href="/index.html" 
+title="SCM Patterns Home">SCM Patterns Home</a>&nbsp;|&nbsp; 
+
+<a class="navbar" href="/consulting.html"
+title="Consulting Services">Consulting</a>&nbsp;|&nbsp;
+
+<a class="navbar" href="/book/" 
+title="SCM Patterns Book">
+The Book</a>&nbsp;|&nbsp;
+
+
+<a class="navbar" href="/pubs/"
+title="Related Publications">Publications</a>&nbsp;|&nbsp;
+
+<a class="navbar" href="/community/"
+title="Community and Related sites">Community&nbsp;&amp;&nbsp;Partners</a>&nbsp;|&nbsp;
+
+
+<a class="navbar" href="/related-books/"
+title="Related Books">Related Books</a>&nbsp;|&nbsp;
+<!--
+<a class="navbar" 
+   href="/wiki/"
+   title="SCM Patterns Wiki">Wiki</a>&nbsp;
+-->
+</td>
+<td class="navbar" valign="top">
+<a class="navbar" 
+   href="/contact.html"
+   title="Contact Us">Contact Us</a>
+</td>
+
+</tr>
+
+<tr>
+<td  height="25" class="navbar"><!-- put in the home page -->
+<!--#if expr="\"$page_path\" = /.*SCMHOME.*/"-->
+<a class="navbar"
+href="/index.html">SCM Patterns Home</a>
+&nbsp;<img  src="/site-icons/triangle-blue.gif" width="20" height="16"
+       alt="&gt;" title="&gt;"/>&nbsp;
+<!--#endif -->
+
+<!-- put the sub paths in -->
+<!--#if expr="\"$page_path\" = /.*-BOOK-.*/"-->
+
+<a class="navbar" href="/book/" 
+title="SCM Patterns Book">SCM Patterns Book</a>
+&nbsp;
+<img  src="/site-icons/triangle-blue.gif" width="20" height="16"
+      align="bottom" alt="&gt;" title="&gt;"/>&nbsp;
+
+<!--#endif -->
+<!--#if expr="\"$page_path\" = /.*PUBS.*/"-->
+<a class="navbar" href="/pubs/" 
+title="Related Publications">Publications</a>&nbsp;
+<img  src="/site-icons/triangle-blue.gif" width="20" height="16"
+      align="bottom" alt="&gt;" title="&gt;"/>&nbsp;
+
+<!--#endif -->
+<!--#if expr="\"$page_path\" = /.*-BOOKSTORE-.*/"-->
+
+<a class="navbar" href="/related-books/" 
+title="Related Books">Related Books</a>
+&nbsp;
+<img  src="/site-icons/triangle-blue.gif" width="20" height="16"
+      align="bottom" alt="&gt;" title="&gt;"/>&nbsp;
+
+<!--#endif -->
+
+
+<!-- put the sub paths in -->
+<!--#elif expr="\"$page_path\" = /.*SomethingElse.*/"-->
+
+<!--#endif -->
+
+<!-- Insert the description of the current page -->
+<!--#echo var="pagetitle"-->
+
+</td></tr></table>

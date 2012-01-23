@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE scmbooklist SYSTEM "booklist.dtd" >
+
+<scmbooklist>
+<book>
+<authors><author><firstname>John</firstname>
+<lastname>Smith</lastname></author></authors>
+<title>This is a title</title>
+<isbn>John</isbn>
+<description>This is a book.</description>
+<categories><category>SCM</category>
+</categories>
+<img src=""/>
+</book>
+</scmbooklist>

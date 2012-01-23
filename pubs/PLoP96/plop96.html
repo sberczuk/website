@@ -1,0 +1,344 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Configuration Management Patterns</TITLE>
+
+<META NAME="GENERATOR" CONTENT="Internet Assistant for Microsoft Word 2.0z">
+</HEAD>
+
+<BODY>
+
+<H1><CENTER><FONT SIZE=4>Configuration Management Patterns</FONT></CENTER>
+</H1>
+
+<P>
+<CENTER>Steve Berczuk
+<!--
+<BR>
+Optimax Systems Corporation 
+<BR>
+201 Broadway
+<BR>
+Cambridge MA 02139
+<BR>
+<CENTER>berczuk@optimax.com</CENTER>
+-->
+
+<P>
+
+Current Address:
+<ADDRESS>
+<a href="mailto:berczuk@acm.org"> berczuk@acm.org </a>
+</ADDRESS>
+</CENTER>
+<!--
+<script language=JavaScript src="../contact.js" type="application/x-javascript")
+</script>
+-->
+<P>
+Configuration management is part of an efficient development process.
+As with other aspects of software development, configuration management
+happens in the presence of social and organizational constraints.
+The various goals of configuration management (stability, developer
+independence and interaction, etc.) sometimes conflict with each
+other. This paper presents three configuration management patterns
+and shows how the forces between them balance out. It also relates
+them to organizational patterns.
+<H1>Introduction</H1>
+
+<P>
+Software configuration management (SCM) is an important aspect
+of development process. A good SCM process makes it possible for
+teams of developers to work together on a project  effectively.
+While there are various tools that can make the process simpler,
+there are certain patterns  for software configuration management
+that exist unsuccessful development organizations. 
+<P>
+A successful configuration management process allows:
+<UL>
+<LI> Developers to work together on a project, sharing common
+code.
+<LI> Developers to share development effort on a module.
+
+<LI> Developers to have access to the current stable (tested)
+version of a system.
+<LI> The ability to back up to a previous stable version (one
+of a number of <I>Named Stable Bases </I>[5] ), of a <I>system</I>
+<LI> The ability of a developer to checkpoint changes to a module
+and to back off  to a previous version of that <I>module</I>.
+</UL>
+<P>
+Attaining all of these goals involves compromises (many people
+working of one body of code makes maintaining consistency difficult,
+for example).  This paper presents 3 patterns that illustrate
+how the problems presented by configuration management problems
+can conflict with each other, and how the various forces can be
+balanced.  We also show how SCM interacts with some of the organizational
+process patterns described by Coplien [5]  and the Development
+Episodes Patterns of Cunningham[6] .
+<P>
+The goals of this paper are to:
+<P>
+<UL>
+<LI> Illustrate how patterns can be applied to the mechanics
+of software development. 
+<LI> Show how configuration management and organizational patterns
+interact.
+
+<LI> Provide an illustration of how the forces in some patterns
+interact, and how one can try to balance conflicting forces.
+</UL>
+<P>The patterns are illustrated with an example which has the following
+participants:
+<UL>
+<LI> A number of Developer Workspaces, each representing the
+environment of  a specific developer in the organization. 
+<LI> The Project Repository, which is the common set of files
+which are used in a development project, for example, the Version
+Control system.
+</UL>
+Configuration management is best implemented with tools that simplify
+and/or enforce policies, so reference is made to tools in the
+examples. The patterns are (hopefully) independent of the tools
+used.
+<H1>A Guide to the Patterns</H1>
+
+<P>
+This section summarizes  the intents of the patterns.
+<P>
+<UL>
+<LI> <I>Private Versioning</I>: Allow a developer to checkpoint
+changes for convience and security without violating organizational
+standards regarding granularity of revisions.
+
+<LI> <I>Incremental Integration</I>: Provide a means for a developer
+to &igrave;pre-test&icirc; interfaces before an integration build.
+<LI> <I>Independent Develpment</I>: Make sure that new builds
+do not interfere with a developer&iacute;s work in progress.
+<H1>Private Versioning</H1>
+</UL>
+<P>
+A developer should have a way to checkpoint changes without making
+these changes available to the development team at large. We want
+to implement <I>Code Ownership</I>(17) [5]  but subsystems never
+work entirely in isolation. 
+<P>
+<B>Periodic integration of a developer's work with that of other
+members of the development team is important for ensuring stability.
+</B>Checkpointing only after completing major changes can make
+it difficult to back off of one phase of a change. Using the revision
+control area for this can lead to changes being &quot;published&quot;
+before they are ready for integration.  Also, publishing intermediate
+changes can lead to a deceptive number of revisions listed in
+the SCM system. It is necessary to be able to save intermediate
+steps in a change in case a coding step results in an error. This
+is particularly important when:
+<P>
+<UL>
+<LI> The mechanism for specifying that a version is ready for
+integration is primitive, and another developer has access to
+a version as soon as it is checked it.
+
+<LI> There is a desire to keep the revision history database
+&quot;uncluttered&quot; with only significant changes logged.
+</UL>
+<P>
+therefore:
+<P>
+<I>Developers should be provided with a mechanism for check pointing
+changes at a granularity that they are comfortable with. This
+can be provided for by a local revision control area, Only stable
+code sets are checked into the Project Repository</I>
+<P>
+Add a Private Repository to the Developer&iacute;s Workspace so
+that a developer can save intermediate versions before checking
+them in to the Repository. The Private Repository can use the
+same mechanisms as the Project Repository (ie, RCS) or can simply
+be a means of maintaining copies of intermediate files.
+<P>
+It is important to make sure that developers using <I>Private
+Versioning</I> remember to migrate changes to the shared version
+control system at reasonable intervals.
+<P>
+The revision control mechanism could also provide a means for
+restricting access to checked-in versions that are not yet ready
+for use by others, and could also provide a mechanism for filtering
+log messages to eliminate trivial changes.
+<H2>Example</H2>
+
+<P>
+The project repository using CVS for version control. Add to the
+Developer workspace a shadow directory in which there is an RCS
+directory for the developer&iacute;s use only. The developer copies
+files to the &igrave;main&icirc; development area before checking
+them into the project repository.
+<H1>Incremental Integration</H1>
+
+<P>
+Some organizations have infrequent integrations which reflect
+large changes. This can make it difficult for the integration
+release to work as expected, complicate the process of <I>Work
+Integration</I>[6]  and make <I>Named Stable Bases</I>. [5]  difficult
+to achieve when modules do not work together. Because we often
+develop with one Owner Per Deliverable[1]  there will be occasional
+mismatches between units.
+<P>
+<B>For iterative development to work well, it is necessary to
+make sure that components work together. </B>Subsystems get developed
+at different rates. Developers work with <I>Independent Development</I>.
+We need to find a way to make it possible to integrate without
+surprises.
+<P>
+therefore:
+<P>
+<I>Provide a mechanism to allow developers to build all the current
+software periodically. Developers should be discouraged from maintaining
+long intervals between &quot;check-ins.&quot;  Developers should
+also be able to build against any of the </I>Named Stable Bases,<I>
+or the newest checked in software, at will.</I>
+<P>
+Assign the task of building the entire software system periodically.
+<I>Named Stable Bases</I> suggests intervals no more frequent
+that a week. This periodic build should be checked for interface
+compatibility (does it compile?) and testing (Does it still work?)
+Encourage developers to build from files that are likely to be
+in the release (perhaps the newest code in the revision control
+system&iacute;s trunk) to anticpate, and allow time to correct
+for, incompatibilities. The goal is to avoid a &igrave;Big-Bang&icirc;
+integration and allow the Developmental Build[6]  to proceed smoothly.
+<P>
+This can be combined with <I>Independent Development</I> to ensure
+that the changes integrate with a copy of the current development
+system. There are issues relating to the size of the software
+system (some systems take quite a while to build, making frequent
+integrations difficult). Balance this with <I>Private Versions</I>
+to allow the developer some leeway on deciding when to integrate
+their new code into their environment, but do not put it off for
+too  long. 
+<H2>Example</H2>
+
+<P>
+The Developer&iacute;s Workspace could be updated (at the developer&iacute;s
+request) to a named stable base from the Project Repository approximately
+weekly. The developer will also retrieve the current files from
+the repository to anticipate how the current changes in the Workspace
+will work with files that may later be in the baseline. 
+<H1>Independent Development</H1>
+
+<P>
+It has been decided to implement <I>Named Stable Bases</I> (31) [5] 
+However, we must balance the need to keep up to date by <I>Incremental
+Integration</I>, with the desire of developers to maintain a stable
+environment for feature development/bug fixing, enabling a <I>Programming
+Episode</I> [6] to proceed smoothly.
+<P>
+<B>How can we balance the need for developers to use current revisions,
+based on periodic baselines, with the desire to avoid undue grief
+by having development dependencies change from underneath them?</B>
+<P>
+It is important for developers to work with current versions of
+software subsystems to keep up with the latest enhancements, avoid
+running into already fixed bugs fixed elsewhere, and to avoid
+getting out of synch with interface changes.  A developer who
+keeps changes un-released (or not checked in to the version control
+system) can disruptother team members. <I>Named Stable Bases</I>
+recommends integrations at an interval of no more than once a
+week. Introducing new software into an environment while debugging
+may cause grief by introducing new behavior, and providing distractions
+because of the time spent resolving integration issues &oacute;
+in some cases, code may no longer compile due to interface changes.
+<P>
+Some organizations, to facilitate <I>Incremental  Integration</I>,
+will have a shared baseline of code, libraries, etc. Unfortunately
+changing a code base, even in a different subsystem, can cause
+problems when there are interface changes, for example. You want
+to avoid hearing stories about developers leaving a problem at
+night to view it in the morning with a clear head, only to find
+that one's test environment does not compile.
+<P>
+therefore:
+<P>
+<I>Provide a mechanism where developers can maintain independent
+development environments, This allows them to avoid having an
+integration step interrupt work in progress. The environment should
+represent a snapshot of all the software being developed in a
+system, not just the code the developer is modifying. Try to ensure
+that the private development area is not used as a means of avoiding
+integration issues.</I>
+<P>
+This pattern conflicts somewhat with <I>Incremental Integration
+</I> when a developer delays retrieving  the current release for
+too long, so make sure that developers are encouraged to use integrate
+their code frequently, perhaps by providing a mechanism for easily
+backing of a difficult change.
+<P>
+A consequence of this pattern is that, depending on how this is
+implemented, the disk space requirements of a project may grow
+quickly as N developers will have their own copies of the source
+code. But often the costs of personnel greatly exceed the cost
+of an extra disk. A modification to this approach is that stable,
+and distantly related subsystems can be used by reference, but
+one should be made aware of when changes are imminent. In this
+case the CM system should provide access to prior <I>Named Stable
+Bases </I>as well. 
+<P>
+A variation on this pattern is to allow developers simply to defer
+advancing to a new <I>Named Stable Base</I> until the current
+problem is solved.
+<H2>Example</H2>
+
+<P>
+A developer is working on a problem The Developer Workspace is
+self contained with all of the files needed to build the system.
+The Developer workspace gets updated only at the developer&iacute;s
+request, after the problem is solved in the context of the current
+Names Stable Base.
+<H1>Acknowledgments</H1>
+
+<P>
+Software configuration management occurs at all development organizations,
+with varying degrees of success, and these patterns were improved
+by input from people with different experiences. Javier Barreiro
+and Neil Harrison for provided me with other perspectives on configuration
+management. Royce Buehler and Doug Alan worked with me on many
+of the issues for the configuration management system at the MIT
+Center for Space Research, on which some of these patterns are
+based. David Ting first brought SCM issues (particularly those
+involving remote teams) to my attention while I was at the Kodak
+Boston Technology Center.  My PLoP shepherds, Russ Corfman and
+DeLoy Bitner and the members of my PLoP 96 working group made
+many suggestions which improved this paper.
+<P>
+The development of the SCM system at MIT, which inspired these
+patterns, was supported in part by NASA/GSFC contract NAS5-30612.
+<H1>References</H1>
+
+<P>
+1. Cockburn, A., <I>The Interaction of Social Issues and Software
+Architecture.</I> Communications of the ACM, 1996. <B>39</B>(10/
+October 1996): p. 40-46.
+<P>
+2. Berczuk, S.P., <I>Organizational Multiplexing: Patterns for
+Processing Satellite Telemetry with Distributed Teams</I>, in
+<I>Pattern Languages of Program Design</I>, J. Vlissides, J. Coplien,
+and N. Kerth, Editors. 1996, Addison-Wesley: Reading, MA.
+<P>
+3. Berczuk, S.P., <I>A Pattern for Separating Assembly and Processing</I>,
+in <I>Pattern Languages of Program Design</I>, J. Coplien and
+D. Schmidt, Editors. 1995, Addison-Wesley: Reading, MA.
+<P>
+4. Humphrey, W., <I>Managing the Software Process</I>. 1990, Reading,
+MA: Addison-Wesley.
+<P>
+5. Coplien, J.O., <I>A Generative Development Process Pattern
+Language</I>, in <I>Pattern Languages of Program Design</I>. 1995,
+Addison-Wesley: Reading, MA.
+<P>
+6. Cunningham, W., <I>Episodes: A Pattern Language of Competitive
+Development</I>, in <I>Pattern Languages of Program Design 2</I>.
+1996, Addison-Wesley: Reading, MA. <BR>
+
+</BODY>
+
+</HTML>

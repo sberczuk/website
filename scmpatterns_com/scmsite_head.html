@@ -1,0 +1,19 @@
+<!-- BEGIN head content for SCMPATTERNS.com site -->
+<!-- Time-stamp: "2002-11-28 20:57:56 default@OZCHECK" -->
+<!-- all links should be based at scmpatterns.com. -->
+
+<!--If we get to the pages of this site via scm-patterns-book then use -->
+<!--the base URL. Otherwise just use the default base. This allows us -->
+<!--to test the web pages on a localhost server more easily -->
+
+<!--#if expr="\"$DOCUMENT_URI\" = /.*scm-patterns-book.*/" -->
+<link rel="stylesheet" type="text/css" href="/scm-patterns-book/site.css"
+title="SCMPatterns.com Style Sheet"/>
+<base href="http://www.scmpatterns.com"/>
+<!--#else -->
+<link rel="stylesheet" type="text/css" href="/site.css"
+title="SCMPatterns.com Style Sheet"/>
+
+<!--#endif -->
+
+<!-- END head content for SCMPATTERNS.com site -->

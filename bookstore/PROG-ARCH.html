@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head xmlns="">
+<!--#set var="page_path" value="HOME-BOOKSTORE"-->
+<link title="Steve B Style Sheet" href="../spb_site.css" type="text/css" rel="stylesheet" />
+<base target="_top" />
+<!--category info PROG-ARCH#set var="pagetitle" value=""-->
+<!--#set var="pagetitle" value=""-->
+<title>
+<!--#echo var="pagetitle"-->
+</title>
+</head>
+<body>
+<!--#include virtual="/berczuk_navbar.html"-->
+<script language="JavaScript">
+function popUp(URL,NAME) {
+amznwin=window.open(URL,NAME,'location=yes,scrollbars=yes,status=yes,toolbar=yes,resizable=yes,width=380,height=450,screenX=10,screenY=10,top=10,left=10');
+amznwin.focus();}
+
+</script>
+<div class="bodytext">
+<h1> Recommendations: </h1>
+<table>
+<tr>
+<td valign="top">
+<small xmlns="">
+<ul>
+<li>
+<a href="all.html">All Recommended Books</a>
+</li>
+<li>View By Category</li>
+<ul>
+<li>
+<a href="SYSTEMS.html">Building Software Systems</a>
+</li>
+<li>
+<a href="AGILE.html">Agile Software Development</a>
+</li>
+<li>
+<a href="CREATE-SOLVE.html">Creativity and Problem Solving</a>
+</li>
+<li>
+<a href="SW_PATTERNS.html">Patterns in Software</a>
+</li>
+<li>
+<a href="J2EE.html">J2EE/Struts Application Development</a>
+</li>
+<li>
+<a href="UML.html">The Unified Modeling Language</a>
+</li>
+<li>
+<a href="ARCH_PATTERNS.html">Patterns in Architecture</a>
+</li>
+<li>
+<a href="TECHSOC.html">Technology and Society</a>
+</li>
+<li>
+<a href="ORGS-METHODS.html">Organizations, Teams, Methods and Management</a>
+</li>
+<li>
+<a href="SCM.html">Software Configuration Management</a>
+</li>
+</ul>
+</ul>
+</small>
+</td>
+<td valign="top">
+<!--#include file="amazon-2.html"-->
+</td>
+</tr>
+<tr>
+<td align="center" colspan="2">
+<small>
+<!--#config timefmt="%B %e, %Y"-->
+Last modified on  
+<!--#echo var="LAST_MODIFIED"-->
+&nbsp;
+<a title="about the books page" href="about.html">About this page</a>
+</small>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

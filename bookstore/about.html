@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd ">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!-- Time-stamp: "2003-02-10 11:42:28 default@OZCHECK" -->
+<!--#set var="page_path" value="HOME-BOOKSTORE"-->
+<!--#set var="pagetitle" value="About the Books Page"-->
+<title><!--#echo var="pagetitle"--></title>
+<link rel="stylesheet" type="text/css"  href="/spb_site.css"     title="Steve B Style Sheet"/>
+<meta name="keywords" content="Books, web design, html"/>
+<meta name="description" content="Meta information about the books page."/>
+</head>
+<body>
+<!--#include virtual="/berczuk_navbar.html"-->
+<div class="bodytext">
+<h1><!--#echo var="pagetitle"--></h1>
+
+<p>This page explains why I started the books page and how I put the
+books page together, for those who are curious. I started the
+recommended books page because people would often ask me to suggest
+books to read on technical topics. I heard about the <a href="http://www.amazon.com/exec/obidos/subst/associates/join/associates.html">Amazon Associates</a>
+program and decided that it would be a good thing to organize the page
+around. The books page generates a <em>very</em> small amount of
+income, and it all goes towards paying for my domain and hosting
+services. So, the real purpose is to have place to suggest books that
+I have found useful.</p>
+
+<p>Another purpose that this page serves is to be a place for me to
+experiment with web technologies. In many cases I try to do things in
+a way that is as simple as possible (this is a hobby after all). But
+if I have the time and motivation, I'll use this site as a learning
+experience. Often the end result is still that the site is easier to
+maintain and use.</p>
+
+<h2>About the Books</h2>
+<p>
+Every book on this page is one that I have read (though sometime in
+manuscript form prior to actual publication) or had highly recommended
+to me, and which I used to solve a problem, or is closely related to a
+book that I found useful (for example a newer edition of a favorite book).
+</p>
+<h2>About the Page</h2>
+<p>
+I originally updated this page entirely by hand coded html, and using
+some of the link generation tools that amazon provides. A short while
+ago I decided that it made more sense to generate the page dynamically
+from XML. The elements of this process are:
+</p>
+
+<ul>
+<li>A <a href="books.dtd">DTD</a> that defines the structure of the
+entries. (I plan to use XSD soon).</li>
+<li>An <a href="books.xml">XML Source file</a> with the raw data. (You
+may need to <em>save</em> this file rather than view it if your
+browser supports XSLT transformations.</li>
+
+<li>An <a href="book-std.xsl">XSLT Stylesheet</a> to generate HTML
+from the XML.(You may need to <em>save</em> this file rather than view
+it if your browser supports XSLT transformations.)</li>
+
+<li>An XSLT Engine, <a href="http://xml.apache.org/xalan-j/">Apache Xalan</a>.</li>
+<li><a href="http://httpd.apache.org/">Apache</a> Server Side Includes to insert some elements (like some
+amazon provided code) that is not XHTML compliant.</li>
+</ul>
+</div>
+</body>
+</html>

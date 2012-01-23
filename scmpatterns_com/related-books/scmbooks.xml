@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="book-std.xsl"?>
+<!DOCTYPE books SYSTEM "../../berczuk_com/bookstore/books.dtd" >
+<!-- Categegories are defined in categories.xml -->
+
+<books>
+<book>
+    <title>Software Configuration Management Implementation Roadmap</title>
+    <isbn>0470862645</isbn>
+    <authors>Mario E. Moreira</authors>
+    <imageURL>images/0470862645.01.TZZZZZZZ.jpg</imageURL>
+    <categories>
+      <category>SYSTEMS</category>
+      <category>SCM</category>
+    </categories>
+    <comments>If you need to implement an SCM process for your
+    organization at an organization, application, or project level
+    this book will guide you through the steps that you need to take.
+    It includes customizable templates and examples to more quickly
+    get you to your SCM goals, </comments>
+</book>
+<book>
+<title>Software Configuration Management Patterns: Effective  Teamwork, Practical Integration</title>
+	<isbn>0201741172</isbn>
+	<authors>Steve Berczuk (with   Brad Appleton)</authors>
+	<imageURL>images/0201741172.01.TZZZZZZZ.jpg</imageURL>
+    <categories>
+      <category>ORGS</category>
+      <category>SCM</category>
+      <category>METHODS</category>
+</categories>
+	<comments>This book describes Essential SCM
+practices. Developers,  team leaders and those just learning about
+software  configuration management should find this book
+useful.</comments>
+<seeAlso>
+<isbn>0932633161</isbn>
+<isbn>020161622X</isbn>
+<isbn>0321117662</isbn>
+</seeAlso>
+</book>
+
+
+
+<book>
+	<title>Configuration Management Principles and Practice</title>
+	<isbn>0321117662</isbn>
+	<authors>Anne Mette Jonassen Hass and Glenn Hass</authors>
+	<imageURL>images/0321117662.01.TZZZZZZZ.jpg</imageURL>
+	<categories>
+ 		<category>ORGS</category>
+ 		<category>SCM</category>
+			<category>METHODS</category>
+	</categories>
+	<comments>This book is less about how to do SCM than about
+	what SCM is. It is a great resource to read and to have on
+	your shelf if you want to understand the scope of SCM. It is
+	not entirely clear to me why this book is in AW's Agile
+	series, but it is a worthwhile read so that you can understand
+	what aspects of more formal SCM that you may be (justifiably)
+	skipping on your project after you have implemented the
+	techniques in the SCM Patterns book.</comments>
+
+ <seeAlso>
+     <isbn>0201741172</isbn>
+
+</seeAlso>
+</book>
+
+<book>
+	<title>Software Release Methodology</title>
+	<isbn>0136365647</isbn>
+	<authors>Michael E. Bays and Michael Bays</authors>
+	<imageURL>images/0136365647.01.TZZZZZZZ.jpg</imageURL>
+	<categories>
+ 		<category>SYSTEMS</category>
+			<category>SCM</category>
+	</categories>
+	<comments>This book has a good discussion of various types of codelines, as well as branching and merging strategies. It is clearly written and is a good resource if you want to go into more depth about branching strategies.</comments>
+</book>
+
+<book>
+	<title>Software Architecture: Organizational Principles and Patterns</title>
+	<isbn>0130290327</isbn>
+	<authors>David M. Dikel, David Kane and James R. Wilson</authors>
+	<imageURL>cover/0130290327.01.TZZZZZZZ.jpg</imageURL>
+	<categories>
+ 		<category>SYSTEMS</category>
+		<category>SW_PATTERNS</category>
+	</categories>
+	<comments>This is one of the most useful books on software architecture that I have read. It discusses the qualities of a good architecture, and how the organization and process relates to the architecture.</comments>
+</book>
+
+
+
+</books>

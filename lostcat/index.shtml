@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd ">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Help Find Fergus</title>
+<!-- Time-stamp: "2002-10-05 22:14:23 default@SPBVAIO" -->
+<link rel="stylesheet" type="text/css"  href="../spb_site.css"     
+  title="Steve B Style Sheet"/>
+</head>
+<body>
+<table width="100%" class="navarea">
+<!--#include virtual="/berczuk_menu.html"-->
+
+<tr><td class="navbar"><a class="navbar"
+href="../index.shtml">berczuk.com Home</a>&nbsp;&gt;&nbsp;Lost Cat</td></tr>
+</table>
+
+
+<h1>Lost Fergus</h1>
+<center>
+<img src="fergus-web.jpg" width="288" height="220"/>
+</center>
+<ul>
+<li>2 year old male cat.</li>
+<li>Last seen Tuesday September 24, 2002 near the corner of Teel St and
+Sawin St in East Arlington.</li>
+<li>His name is Fergus, but he may not respond to it.</li>
+</ul>
+<p> If you seen him, please contact us by
+email: <a href="mailto:steve@berczuk.com">steve@berczuk.com</a> or by
+phone at 781 646 6819.</p>
+</body>
+</html>

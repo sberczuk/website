@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd ">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!-- Time-stamp: "2003-03-07 11:41:52 default@OZCHECK" -->
+<!--#set var="page_path" value="HOME-RESUME-DEMOS"-->
+<!--#set var="pagetitle" value="VCF to CSV Conversion"-->
+<title><!--#echo var="pagetitle"--></title>
+<link rel="stylesheet" type="text/css"  href="/spb_site.css"     title="Steve B Style Sheet"/>
+<meta name="keywords" content="palm aba csv"/>
+<meta name="description" content="utility to import palm data to Mozilla"/>
+</head>
+<!--#include virtual="/berczuk_navbar.html"-->
+
+<body>
+<div class="bodytext">
+<h1><!--#echo var="pagetitle"--></h1>
+
+
+<p>This is a utilty that makes it easier to import address information from
+your Palm OS device into your Mozilla email client. Mozilla will allow
+you to inport VCards, but you must acknowledge each entry. You can
+batch import csv data, but when you export addresses from the palm
+desktop as CVS email addresses can appear in any one of the phone
+fields. This application starts with a file containing VCards of all
+of your contacts and generates csv file containing last name, first
+name, display name, and up to 2 email addresses for each contact. To
+use this do the following:</p>
+<ol>
+<li>From your Palm Desktop Address book select all of the contacts
+whose email addresses that you want to import into Mozilla. Export
+these contacts as VCards.</li>
+<li>Use the form below to select the file that you just exported.</li>
+<li>Press <em>Process File</em> and save the file.</li>
+<li>In your email client address book, import the csv file.</li>
+</ol>
+<p>Note: This is an import operation, not a synch operation, so unless
+you want duplicates, you may have to delete the existing entries from
+your mail client's address book. I import my entire palm address book
+into a new folder in Mozilla, and delete it before I import the new one.</p>
+<form enctype="multipart/form-data" action="/cv/demos/palm-export/palmExport.php" method="post">
+<input type="hidden" name="MAX_FILE_SIZE" value="6000000">
+VCF File to Process: <input name="vcfFile" size="50" type="file">
+<input type="submit"  value="Process File">
+</form>
+
+
+</body>
+</html>

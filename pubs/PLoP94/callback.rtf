@@ -1,0 +1,172 @@
+{\rtf1\mac\deff2 {\fonttbl{\f0\fswiss Chicago;}{\f2\froman New York;}{\f3\fswiss Geneva;}{\f4\fmodern Monaco;}{\f13\fnil Zapf Dingbats;}{\f14\fnil Bookman;}{\f15\fnil N Helvetica Narrow;}{\f16\fnil Palatino;}{\f18\fnil Zapf Chancery;}{\f20\froman Times;}
+{\f21\fswiss Helvetica;}{\f22\fmodern Courier;}{\f23\ftech Symbol;}{\f33\fnil Avant Garde;}{\f34\fnil New Century Schlbk;}{\f1792\fnil Lucida Bright;}{\f2000\fnil Garamond Narrow;}{\f2007\fnil Delphian;}{\f2017\fnil Lubalin Graph;}{\f2024\fnil Machine;}
+{\f2029\fnil Nadianne;}{\f2036\fnil Old English Text;}{\f2038\fnil Onyx;}{\f2040\fnil Oxford;}{\f2046\fnil Swing;}{\f2052\fnil Zeal;}{\f2515\fnil MT Extra;}{\f9840\fnil Espy Sans;}{\f9842\fnil Espy Sans Bold;}{\f14809\fnil eWorld Tight;}
+{\f14811\fnil Helvetica Compressed;}{\f14974\fnil Helvetica Black;}}{\colortbl\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;}
+{\stylesheet{\s242\sb160 \f16\fs20 \sbasedon0\snext0 page number;}{\s245\sb160 \f16\fs18\up6 \sbasedon0\snext0 footnote reference;}{\s246\sb160 \f16\fs20 \sbasedon0\snext246 footnote text;}{\s254\sb160\sa60 \b\f21\fs20 \sbasedon0\snext0 heading 2;}{
+\s255\qc \b\f16\fs20 \sbasedon0\snext0 heading 1;}{\sb160 \f16\fs20 \sbasedon222\snext0 Normal;}{\s2\sb240 \b\f16\fs20 \sbasedon0\snext3 patTitle;}{\s3\sb240 \f16\fs20 \sbasedon0\snext0 paraAfterTitle;}{\s4\fi-180\li720 \f22\fs20 \sbasedon0\snext4 code;}{
+\s5\li720 \f22\fs20 \sbasedon0\snext5 Code;}{\s6\fi-1440\li1440\sb240\tx1440 \f16\fs20 \sbasedon3\snext6 Reference;}}{\info{\title Callback Pattern}{\subject Pattern for PlOP 94}{\author Steve Berczuk}{\keywords patterns}}\widowctrl\ftnbj\fracwidth 
+\sectd \sbknone\pgnx6570\pgny14490\linemod0\linex0\cols1\endnhere \pard\plain \s255\qc \b\f16\fs20 A Pattern for Separating Assembly and Processing \par 
+\pard\plain \qc \f16\fs20 \par 
+Stephen P. Berczuk \par 
+Massachusetts Institute of Technology  Center for Space Research \par 
+Room NE80-6015 / 77 Massachusetts Avenue\par 
+Cambridge, MA 02139 \par 
+(617) 253-3840 /berczuk@mit.edu\par 
+\pard\plain \s254\sb160\sa60 \b\f21\fs20 Context\par 
+\pard\plain \f16\fs20 After a system in
+volving a number of non co-located development teams is designed, functions are assigned to different teams. It necessary to decouple work being done by development teams working on the different components of a system in order to prevent development bottl
+enecks.  To facilitate this decoupling, upstream components need not be directly concerned with downstream processing. \par 
+\pard \sb160 Using a pattern such as Builder [Design], which constructs objects from a generic data stream based on the content in the stream, will d
+ecouple the interfaces between different development groups, by insulating the operations team from knowing the definition of units of work, and the details of which packets belong in which collections. It is still necessary to decouple the upstream and do
+wnstream components.\par 
+\pard \sb160 The problem can be summarized in this way:\par 
+\pard\plain \s2\sb240 \b\f16\fs20 In an environment  where components developed by separate teams with different focuses, must interoperate, it is necessary to partition responsibilities in such a way that dependencies can be 
+reduced while interoperability can be maintained.  In particular, the well-defined portions of the system  should be isolated from  the \ldblquote to be specified\rdblquote 
+ pieces.  This may be particularly important if teh teams are geographically distributed. \par 
+\pard\plain \sb160 \f16\fs20 
+A telemetry application is used here as an example. Telemetry processing systems are examples of applications in which one subsystem creates objects from external inputs in a well-defined manner and another subsystem processes these collected data, in a le
+ss clearly defined manner.  This context can, however, be generalized to include any system in which the interfaces between a producer and consumers need to be divided cleanly. \par 
+\pard\plain \s254\sb160\sa60 \b\f21\fs20 Satellite Data Processing\par 
+\pard\plain \f16\fs20 A science satellite is composed of different instruments{\fs18\up6 \chftn {\footnote \pard\plain \s246\sb160 \f16\fs20 {\fs18\up6 \chftn }An \ldblquote instrument\rdblquote 
+ is a component of the spacecraft, and can include items such as telescopes, detectors, or on board data processing systems.}} developed by different institutions.  Typically the system is divided into at least two subsystems:  \par 
+\pard \fi-360\li1080 \bullet \tab one team is responsible for converting a \ldblquote byte-stream\rdblquote  into telemetry packets and assembling the telemetry packets into units that represent the information in its original form{\fs18\up6 \chftn 
+{\footnote \pard\plain \s246\sb160 \f16\fs20 {\fs18\up6 \chftn }
+Telemetry is a transport medium. The satellite collects data into a buffer, and then divides the buffer into smaller pieces for transport. The ground systems must then re-assemble the packets into a representation of the buffer so that it can be interprete
+d.}}, \par 
+\pard \fi-360\li1080 \bullet \tab other teams are responsible for processing the data from the telemetry. \par 
+\pard The  following diagram illustrates a typical telemetry processing system:\par 
+\pard \qc\sb160 {{\pict\macpict\picw341\pich196 
+021b00000000009d01521101a10064000c574f524400000000009d0152a10096000c01000000010000000000000001000a00000000009d01522c000c00150948656c7665746963610300150d000a2e0004000000002b0e440a54656c656d657472790d2a0c05427974650d2a0c0653747265616da00097300013005f003e00
+c9a10096000c010000000100000000000000280023006611417373656d626c65205061636b6574730d2a0c0f46726f6d2054656c656d65747279202a0c0653747265616da0009730005c005d008000cda10096000c010000000100000000000000280069006216417373656d626c65207061636b65747320696e746f0d2a0c
+116d65616e696e6766756c20756e6974732ea0009730000a0052008500d5300034010b00600151a10096000c01000000010000000000000028004701130850726f636573730d2a0c0d756e697473206f6620776f726ba00097a000ab61003e00430058005d00f6003022004b00282200a000ada000ab61004100f6005b0110
+00f6003022004e00dc2100a000ada000ab61004e007b00680095ffe8003022004000880015a000ada10096000c0100000001000000000000000401280097007008417373656d626c79a00097a10096000c0100000001000000000000002b92020a50726f63657373696e67a00097a10096000c010000000100000000000000
+040028002f00dc06556e6974730d2a0c036f660d2a0c04576f726ba00097ff}}\par 
+\pard \sb160 
+In a science satellite telemetry processing application the requirements for different software components evolve at different rates. This is partially due to the fact that these applications are developed by different teams.  Often these teams have differ
+ent operational and scientific requirements. Telemetry handling is divided into two phases:\par 
+\pard \fi-360\li360\sb160 \bullet \tab {\i Assembly ,} which processes objects from an input stream, classifies them and assembles larger units, as necessary.  Some of the units are composed of a number of packets; an example of this is a {\i partition}
+. Some of the units are simply individual packets; an example is packets containing {\i status}
+ information about the spacecraft or the instrument. This software is typically well defined, and being key to any downstream processing, it is preferable that it be built and tested as soon as possible. \par 
+\pard \fi-360\li360\sb160 \bullet \tab {\i Processing}
+ , which analyses or reports on the data. This is typically more loosely defined since there are often many ways to process data (consider scientific data analysis applications). Because of the variety of ways in which data can be processed we wish to main
+tain a flexible system. The processing requirements may also take longer to come to closure since they are subject to the influence of more players. \par 
+\pard \sb160 The operational requirements for the transmission and assembly of telemetry packets are well de
+fined since they are based on well established standards and on the specifications of the satellite hardware and controlling software. Telemetry assembly is also rather similar from mission to mission, thus requirements can be more easily defined.  \par 
+\pard \sb160 
+Processing the assembled units of data is less well defined, since the operational requirements vary from mission to mission. Furthermore, these requirements may depend on preliminary analysis being done by scientists who designed the experiments on the sa
+tellite.{\fs18\up6 \chftn {\footnote \pard\plain \s246\sb160 \f16\fs20 {\fs18\up6 \chftn }As an example, the hardware for the {\i X-Ray Timing Explorer }
+was designed to transmit  quite a bit of status information for verification, with the idea that some of it would be useful downstream.  It is still being decided how the ground operation team will use all the information.}}
+ Additionally  there may be a desire to have a variety of processing operations to be performed in different clients which will need the services of the assembly system.\par 
+\pard \sb160 We need a way to isolate the \ldblquote assembly\rdblquote  system from the \ldblquote processing\rdblquote  system so that the assembly system can be developed and tested without waiting for the processing system\rquote 
+s requirements to firm up, thus liberating one part of the system from the development delays caused by ill defined requirements for the downstream part of the system.\par 
+\pard \sb160 Each component is  developed by distinct teams of developers, so building a tightly integrated system would create a great deal of uncertainty in the schedule.\par 
+\pard \sb160 Traditionally the systems are designed with end to end processing in mind. If the end to end processing is not well defined, then the entire system can be held back while the details of downstream processing are resolved.\par 
+We wish to isolate the assembler from the processor , so we need a way for the assembler to hand the completed unit off to the 
+processor when the unit is available. We want a processing function to be added to a system dynamically, without changing the assembly software. \par 
+\pard \sb160 To summarize the forces at work:\par 
+\pard \fi-360\li1080\sb160 \bullet \tab Requirements for one component of a system are available before downstream processing is defined.\par 
+\pard \fi-360\li1080\sb160 \bullet \tab There is a  need to test the assembly code independent of the processing software.\par 
+\pard \fi-360\li1080\sb160 \bullet \tab Assembly and downstream processing may be developed by separate, often non-collocated groups.\par 
+\bullet \tab The assembly system should be developed assuming nothing of the downstream processing.\par 
+\pard \sb160 We  can resolve the problem of decoupling the development of two systems, while maintaining operational coupling by the following:\par 
+\pard\plain \s2\sb240 \b\f16\fs20 
+By providing a facility to set handlers to be invoked when a complete unit is available for processing, we are able to isolate the assembly software from the processing software. Virtual functions help make the  details of the assembly operation transparen
+t.\par 
+\pard\plain \s3\sb240 \f16\fs20 This is similar to a {\i callback} pattern, where a handler is specified to an object to b
+e called when an event occurs, but the motivation differs.  The emphasis in this pattern is on providing a way to allow teams of developers to decouple their work.\par 
+\pard \s3\sb240 
+The classes representing the units of work that the assembly software processes have  a method to set a handler which will be called when the unit is complete. The units of work can be individual data objects or objects created by assembling objects from a
+ data stream. The interface to the assembly mechanism can be hidden by using a Factory patte
+rn or Exemplar [Idioms] Idiom. In doing this we would provide that each data object received by the assembly stream be classified to be an instance of a subclass of a processable unit, the packet, and a virtual apply() method is invoked. In the context of 
+each apply() call, an object is inserted into the appropriate collection, and if the collection  is complete, the handler is called.  \par 
+\pard \s3\sb240 Examples of collections include partitions (which represent a buffer  of data),  and status message packets.\par 
+\pard \s3\sb240 The client c
+reates a handler object (it can also be a pointer to a function) and sets the handler for objects of the same class of collection. Only units which interest the client will be sent to it. The handler can perform a variety of operations, such as interpretin
+g the data stream and performing analysis, or simply  reporting the information to scientist s or operations staff.\par 
+\pard\plain \sb160 \f16\fs20 The  participants in this pattern are:\par 
+\pard \fi-360\li1080\sb160 \bullet \tab the {\i collection} classes, which have methods to set handlers to be invoked when the collection is complete,\par 
+\pard \fi-360\li1080\sb160 \bullet \tab the {\i handler} which will process an instance of collection, and \par 
+\bullet \tab the {\i client}, which associates a handler with a collection.\par 
+\pard\plain \s3\sb240 \f16\fs20 The solution is illustrated in the following diagram:\par 
+\pard\plain \qc\sb160 \f16\fs20 {{\pict\macpict\picw275\pich181 
+02b30000000000b501131101a10064000c574f52440000000000b5011301000a0000000000b5011350007c000e0097004950002500c8004001035000230011003e004ca10096000c0100000001000000000000002c000c00150948656c7665746963610300150d000a2e0004000000002b1990065061636b6574a00097a000
+ab610030001f004a0039009c003022007b002c00c8a000ada10096000c01000000010000000000000028003400140a436f6c6c656374696f6ea00097a10096000c0100000001000000000000002bbc030748616e646c6572a00097070003000350009a006f00b400aba10096000c0100000001000000000000002800ad007b
+06436c69656e74a00097a100b600040001000407000100012200390047415da100b60004000100010700000000230000a100b60004000100040700010001220096008d44a8a100b60004000100010700000000230000a10096000c0100000001000000000000000d0009280058003009322e5061636b65740d2a0b08696e73
+657274730d2a0b0a73656c6620696e746f0d2a0b0a436f6c6c656374696f6ea00097a10096000c01000000010000000000000028007800b515312e20436c69656e74206173736f6369617465730d2a0b1748616e646c6572207769746820636f6c6c656374696f6ea00097a100b6000400010004a000ab61002400bd003800
+d100f60030070001000122002e004c7600a000ada100b60004000100010700000000230000a10096000c010000000100000000000000280019002c2b332e20436f6c6c656374696f6e20676f657320746f2048616e646c6572207768656e20636f6d706c657465a00097a10096000c01000000010000000000000004010d00
+0a2800aa001309417373656d626c7920a00097a10096000c0100000001000000000000002800a800c60a50726f63657373696e67a00097ff}}\par 
+\pard\plain \s254\sb160\sa60\tx9980 \b\f21\fs20 Example syntax. (C++)\par 
+\pard\plain \f16\fs20 
+The following example shows a use of this pattern.  Though the example implies that collection and handling processing occur in the same address space, it is simple to extend the pattern to work when the components are on different processors.\par 
+\pard \sb160 The collection (in this case, a {\i Partition}) class has a method to set a class-wide handler to be called when a complete unit is available,  and a {\i dispose()}
+ method to invoke the handler on the unit of work, The collection can also have an {\i isComplete()}  method.\par 
+\pard \sb160 The processing client sets the handlers to be called when a \ldblquote unit of work\rdblquote  is available using the  {\i setHandler()}
+ method on the collection class. The unit of  work handler is set for each class of collections. The client then gets the next packet from the data stream using a technique based on a factory pattern,
+ which classifies the bytes that represent a packet into the appropriate subclass. The virtual {\i process()}
+ method is then invoked on the packet. The process method assembles the packet into a larger collection, if necessary. If the packet completes the unit of work (recall that a single packet can represent a unit of work) the handler is invoked.\par 
+\pard {\f22 \par 
+\par 
+}\pard\plain \s4\fi-180\li720 \f22\fs20 PartitionHandler aCHandler; \par 
+// Handler to be called for a full partition collection\par 
+\par 
+StatusMsgHandler aSOMsgHandler;\par 
+// Handler to be called for a single packet unit\par 
+\par 
+class Partition \par 
+// a collection that is assembled from a number of related packets\par 
+\{\par 
+public:\par 
+// constructors and the like\par 
+\par 
+setHandler(/*function taking a pointer to a Partition*/);\par 
+// set the handler to be called for all complete partitions\par 
+\par 
+void dispose();\par 
+// apply the handler to the object\par 
+\};\par 
+\par 
+ingest_client()\{\par 
+\tab StandAloneObject::setHandler(aSOMsgHandler);\par 
+\tab Collection::setHandler(aCHandler);\par 
+\par 
+\tab Packet* pkt = getNextPacket(); \par 
+\tab // create a subclass of packet based on info in data stream.\par 
+\par 
+\tab pkt->process();\par 
+\pard \s4\fi-180\li720 \tab // virtual function puts the packet into the right collection if //appropriate) and the collection checks to see if it is full.\par 
+\pard \s4\fi-180\li720 \tab // if pkt is standalone, the handler is called.\par 
+\}\par 
+\par 
+Packet::process()\par 
+\{\par 
+// takes the packet and inserts it into the collection, perhaps\par 
+// doing some processingto determine\par 
+// which of a number of collections is appropriate\par 
+theCollection->insert(this);\par 
+if(theCollection->isComplete())\par 
+\tab theCollection->dispose();\par 
+// dispatch the collection to the appropriate handler\par 
+\}\par 
+\pard\plain \sb160 \f16\fs20 This pattern results in a situation where the assembly software needs to know only the following about the downstream processing:\par 
+\pard \fi-360\li1080\sb160 \bullet \tab What the units of work are that will be dispatched. The details of this which depend on the individual instruments can be hidden from the assembly client through the use of Factories and virtual functions. \par 
+\pard \fi-360\li1080\sb160 \bullet \tab The methods used to set the handlers.\par 
+\pard \sb160 Additionally, the downstream processing client needs to know only:\par 
+\pard \fi-360\li1080\sb160 \bullet \tab The type of units of work to expect.\par 
+\bullet \tab The handling that each unit of work should be afforded.\par 
+\pard \sb160 
+Applications of this pattern include telemetry processing where you must classify and assemble packets from a telemetry stream into partitions, and certain packets represent status messages, which are not assembled into partitions. This pattern can be also
+ be applied in any system where there is a need for one system to perform an operation, and then hand results over to another system for further processing.  It can be extended by allowing a list of handlers to be called whenever a unit
+ of work is available, in a manner similar to the way the standard C library provides the {\i atexit}() function{\fs18\up6 \chftn {\footnote \pard\plain \s246\sb160 \f16\fs20 {\fs18\up6 \chftn }
+The need to register multiple handlers can be made unnecessary by defining a handler object that performs some arbitrary list of functions on the complete unit of work. The UNIX atexit() function is used to register a handler to be called as the process ex
+its. By calling atexit() with a pointer to a function a user adds an {\i additional} handler to be called when the process exits.}}.\par 
+\pard\plain \s2\sb240 \b\f16\fs20 Related Patterns\par 
+\pard\plain \f16\fs20 The use of a generic constructor to classify & build objects from a data stream, is a variant of the {\i Factory}  [Design]. The particular variation of Factory used in the implementation on which this pattern is based is from the {
+\i Exemplar} idiom in [Idioms]. The use of virtual functions on objects to hide the details of assembly from the assembly application can be expanded to be a separate pattern.  \par 
+\pard\plain \s2\sb240 \b\f16\fs20 References\par 
+\pard\plain \s6\fi-1440\li1440\tx1440 \f16\fs20 [Design]\tab Ralph Johnson,  Eric Gamma,  Richard Helm &  John Vlissides, {\i Design Patterns: Elements of Object-Oriented Software Architecture}.. Addison Wesley, 1994.\par 
+\pard \s6\fi-1440\li1440\sb240\tx1440 [Idioms]\tab Jim Coplein, {\i Advanced C++ Programming Styles and Idioms}. Addison Wesley, 1992.\par 
+\pard\plain \s2\sb240 \b\f16\fs20 Acknowledgments\par 
+\pard\plain \s3 \f16\fs20 The PLoP 94 workshop attendees, especially Doug Schmidt  made many useful comments on the early drafts of this paper.  Discussions with Lena Davis help me clarify my thinking about Patterns and Pattern Languages in general.\par 
+\pard \s3\sb240 This work was supported in part by NASA/GSFC contract number NAS5-30612. \par 
+\pard\plain \sb160 \f16\fs20 \par 
+}

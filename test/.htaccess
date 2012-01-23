@@ -1,0 +1,9 @@
+#AddType text/x-server-parsed-html .html
+#XBitHack on tells the server to parse executable files for SSI.
+Options +Includes
+#AddHandler server-parsed .cgi
+AddType text/html .cgi
+
+AddHandler server-parsed .cgi
+#AddType text/html cgi
+

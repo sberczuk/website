@@ -1,0 +1,35 @@
+<!-- DTD for organizing books for a suggested books page -->
+<!-- intended to be formatted in to an Amazon Associates page --> 
+<!-- Steve Berczuk steve@berczuk.com -->
+<!-- Time-stamp: "2002-10-19 11:36:21 default@OZCHECK" -->
+
+<!-- in progress -->
+
+<!ELEMENT scmbooklist (book+)>
+
+<!ELEMENT book (authors, title, isbn, description, categories, img)>
+
+<!ELEMENT authors (author+)>
+<!ELEMENT title (#PCDATA) >
+<!ELEMENT author (firstname,lastname)>
+<!ELEMENT isbn (#PCDATA) >
+
+
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+
+
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT categories (category+)>
+
+<!-- maybe make category a choice? -->
+<!ELEMENT category ( #PCDATA )>
+
+<!-- img: The resource for a jpg or other image for a book cover. -->
+<!ELEMENT img EMPTY>
+<!--         src        url of the image of the cover   -->
+<!ATTLIST  img    src        CDATA                              #REQUIRED >
+<!--         alt       alt text for image tag. Can be inferred from title   -->
+<!ATTLIST  img
+             alt        CDATA                              #IMPLIED >
+

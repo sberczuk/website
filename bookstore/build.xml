@@ -1,0 +1,43 @@
+<project name="MyProject" default="xsl-transform" basedir=".">
+    <description>
+	simple example build file
+    </description>
+  <!-- set global properties for this build -->
+  <property name="src" location="src"/>
+  <property name="build" location="build"/>
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+  </target>
+
+<!--TODO: add a clean target... -->
+<!--TODO: add an upload target to ftp files... -->
+
+<!-- do the XSLT transform for books pages -->
+<target name="xsl-transform" depends="init, make-subpage-script">
+ <style basedir="." destdir="." in="books.xml" out="index.html"
+       extension=".html" style="book-index.xsl"> 
+<param name="date"
+       expression="07-01-2000"/> 
+       
+ </style>
+
+ <style basedir="." destdir="." in="books.xml" out="all.html" 
+	style="book-std.xsl">
+       <param name="date" expression="07-01-2000"/>
+ </style>
+ <ant antfile="buildSubPages.xml"/>
+
+</target>
+
+<!-- generate the scripts list of pages from the categories file -->
+<!--TODO: add a clean target in the generated script... -->
+<target name="make-subpage-script">
+  <style basedir="." destdir="." in="categories.xml" out="buildSubPages.xml" force="true"
+	style="genAntCategoryScript.xsl"/>
+</target>
+
+<!-- ftp the new files -->
+</project>

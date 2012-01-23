@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd ">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!-- Time-stamp: "2003-03-09 22:34:58 default@OZCHECK" -->
+<!--#set var="page_path" value="HOME-RESUME"-->
+<!--#set var="pagetitle" value="Technology Demos"-->
+<title><!--#echo var="pagetitle"--></title>
+<link rel="stylesheet" type="text/css"  href="/spb_site.css"     title="Steve B Style Sheet"/>
+<meta name="keywords" content="Keywords"/>
+<meta name="description" content="Technologies that I have worked with"/>
+</head>
+<body>
+<!--#include virtual="/berczuk_navbar.html"-->
+<div class="bodytext">
+<h1><!--#echo var="pagetitle"--></h1>
+<p>This page contains links to some projects that demonstrate how I
+use various technologies for my personal projects. Some of these
+projects reflect tools that I use on a regular basis, others are just
+demonstrations that I did to get familiar with various internet
+technologies. I collected  the links on this page to provide a more
+accurate answer for the time that I am asked &quot;are you familiar
+with...?&quot;</p>
+
+<p>
+These links are examples of things that I have done quickly; There are
+aspects of the technologies presented here that I did not have a need
+for, and I find that simpler is generally better. One constraint that
+I had was the functions that my ISP supports. For example, I cannot
+run J2EE applications from my web site, so some of these applications
+are a mix of PHP and CGI/shell execution when a JSP solution might
+have been slightly better. The good news is that for the purposes of
+my web site, these implementations are good enough. 
+</p>
+<p>Almost as important as <em>what</em> I worked on, is <em>how</em> I
+worked. In most cases my personal projects we done in an iterative
+fashion with a simple solution followed by enhancements as time
+allowed and my understanding of what I needed grew. I try to write all
+my code using a test first approach.</p> 
+
+
+<p>For more background you can look at my <a href="/cv/Resume-web.html">resume</a>.</p>
+<h2>Projects that I have done for myself</h2>
+<table border="1">
+<tr>
+<th>Project</th>
+<th>Description</th>
+<th>Technologies</th>
+</tr>
+<tr>
+<td><a href="/">My Web Site</a></td>
+<td>My personal web site</td>
+<td>HTML, CSS, Apache (SSI, configuration)</td>
+</tr>
+<tr>
+<td><a href="/bookstore/">My Book Recommendations Site</a></td>
+<td>An amazon.com associates site where I have commentary about
+technical books
+that I like</td>
+<td>HTML staticly generated from XML, XSLT (see the <a
+href="/bookstore/about.html">about</a> link for implementation
+details. Apache SSI.</td>
+</tr>
+
+<tr>
+<td><a href="amazon/">Interface to Amazon Web Services</a> that
+generated an XML node that I can use to generate XML for my <a
+href="/bookstore/">book recommendations</a> page.</td>
+<td>The form takes an ISBN as input and puts the XML into a text window.</td>
+<td>PHP, Java, XML DOM API, HTML Forms</td>
+</tr>
+
+<tr>
+<td><a href="palm-export/">VCard to CSV data conversion</a>.</td>
+<td>A utility to convert <a href="palm-export/">VCard data into CSV data</a> suitable for
+importing address information into a Mozilla email client.</td>
+<td>Java, PHP.</td>
+</tr>
+</table>
+
+<h2>Summary of Technologies from Recent Commercial Projects</h2>
+<p>This table highlights some of the information that you will also
+find on my <a href="/cv/Resume-web.html">resume</a>. This list focuses
+on the Technology, not the techniques, which are also important. This
+is also limited to my more recent experiences.</p>
+<table border="1">
+<tr>
+<th>Project</th>
+<th>Technologies</th>
+</tr>
+<tr>
+<td>Skyva Modeling Environment</td>
+<td>Java, Swing, Schema Mapping to Oracle Database</td>
+</tr>
+<tr>
+<td>iPhrase Natural Language Search System</td>
+<td>XML, XSLT, Java, Python, HTTP</td>
+</tr>
+
+<tr>
+<td>Verbind CRM System</td>
+<td>XML, C++, Java, HTTP</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

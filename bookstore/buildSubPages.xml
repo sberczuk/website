@@ -1,0 +1,37 @@
+<project name="buildSubPages" default="makeScript" basedir=".">
+<target name="makeScript">
+<style basedir="." destdir="." in="books.xml" out="SYSTEMS.html" force="true" style="book-std.xsl">
+<param name="whichCategory" expression="SYSTEMS"/>
+</style>
+<style basedir="." destdir="." in="books.xml" out="AGILE.html" force="true" style="book-std.xsl">
+<param name="whichCategory" expression="AGILE"/>
+</style>
+<style basedir="." destdir="." in="books.xml" out="CREATE-SOLVE.html" force="true" style="book-std.xsl">
+<param name="whichCategory" expression="CREATE-SOLVE"/>
+</style>
+<style basedir="." destdir="." in="books.xml" out="SW_PATTERNS.html" force="true" style="book-std.xsl">
+<param name="whichCategory" expression="SW_PATTERNS"/>
+</style>
+<style basedir="." destdir="." in="books.xml" out="J2EE.html" force="true" style="book-std.xsl">
+<param name="whichCategory" expression="J2EE"/>
+</style>
+<style basedir="." destdir="." in="books.xml" out="PEOPLE.html" force="true" style="book-std.xsl">
+<param name="whichCategory" expression="PEOPLE"/>
+</style>
+<style basedir="." destdir="." in="books.xml" out="ARCH_PATTERNS.html" force="true" style="book-std.xsl">
+<param name="whichCategory" expression="ARCH_PATTERNS"/>
+</style>
+<style basedir="." destdir="." in="books.xml" out="TECHSOC.html" force="true" style="book-std.xsl">
+<param name="whichCategory" expression="TECHSOC"/>
+</style>
+<style basedir="." destdir="." in="books.xml" out="ORGS-METHODS.html" force="true" style="book-std.xsl">
+<param name="whichCategory" expression="ORGS-METHODS"/>
+</style>
+<style basedir="." destdir="." in="books.xml" out="SCM.html" force="true" style="book-std.xsl">
+<param name="whichCategory" expression="SCM"/>
+</style>
+<style basedir="." destdir="." in="books.xml" out="FICTION.html" force="true" style="book-std.xsl">
+<param name="whichCategory" expression="FICTION"/>
+</style>
+</target>
+</project>

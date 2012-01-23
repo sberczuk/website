@@ -1,0 +1,144 @@
+body {
+	background: white;
+	color: black;
+	font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+	font-size:  small;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	text-align:left;
+
+}
+
+#main {
+	/*margin: 0 0 0 0;*/
+	margin: 20px;
+	padding:0;
+	
+	background-color: white;
+	
+	
+	
+}
+
+#header {
+	margin: 0;
+	padding: 0;
+}
+
+#footer {
+	clear: both;
+	
+}
+
+#lsidebar {
+	width: 150px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	
+  font-size: 80%;
+	
+	
+}
+
+#content {
+		
+	margin: 0 27% 0 170px; 
+	padding: 0px;
+	
+	
+	/*padding:20px;
+	*/
+	
+}
+
+#rsidebar {
+	float: right;
+	width: 25%;
+
+   font-size: 80%;
+	background: #CCCCCC;
+	margin: 0;
+	padding: 0;
+}
+
+.bodytext {
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+
+
+div.photopage {
+	margin-left: 0%;
+	margin-right: 0%;
+	background: #CFCFCF;
+	color: black;
+	font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+	font-size: 75%;
+}
+
+span.bodytext {
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+A { font-style: normal; }
+A:link { color: blue; }
+A:active { color: red; }
+A:visited { color: purple; }
+H1 { font-family: Verdana, Arial, Helvetica, Geneva, sans-serif; }
+H2 { font-family: Verdana, Arial, Helvetica, Geneva, sans-serif; }
+H3 { font-family: Verdana, Arial, Helvetica, Geneva, sans-serif; }
+H4 { font-family: Verdana, Arial, Helvetica, Geneva, sans-serif; }
+
+
+
+.sidebar {
+	font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+	font-size: 90%;
+	background: #CCCCCC;
+}
+
+td.navbar {
+	background: silver;
+	font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	font-size: 75%;
+	padding-left: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 0;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+.here {
+	background: silver;
+	font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+	text-align: center;
+	padding-left: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 5px;
+	text-decoration: none;
+	color: black;
+	font-size: 75%;
+	font-weight: bold;
+}
+
+.navarea {
+	margin-left: 0;
+	margin-right: 0;
+	background: silver;
+	text-align: left;
+	border-color: white;
+}
+
+a.navbar { color: white; }
+A.navbar:visited { color: purple; }
+A.navbar:link { color: blue; }
+A.navbar:active { color: blue; }
+A.navbar:hover { color: white; }

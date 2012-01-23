@@ -1,0 +1,135 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Workspace Patterns</TITLE>
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080">
+
+<B><FONT SIZE=6><P ALIGN="CENTER"><A NAME="_Ref429488111">Workspace Patterns</P>
+</B></FONT><P ALIGN="CENTER">Steve Berczuk</P>
+<P ALIGN="CENTER"><A HREF="mailto:berczuk@acm.org">berczuk@acm.org</A></P>
+<B><FONT SIZE=6><P>Introduction</P>
+</B></FONT><P>A good organizational structure and architecture can help you build good software on time, but cannot guarantee results unless an adequate day to day work process is in place. After the architecture is defined, you need structures to support implementation. These include</P>
+
+<UL>
+<LI>Configuration Management</LI>
+<LI>Build Repeatability </LI>
+<LI>Workspace</LI></UL>
+
+<P>Configuration management structures include policy issues such as branching, Build repeatability involves the structures which make it possible to reliably build identifiable versions of the system so that  all the other activities related to releasing a product can proceed. Workspace structures involve the developer’s day-to-day work more closely, though they need the infrastructure provided by build repeatability and SCM. Indeed, all these elements interact strongly, since good CM support makes certain workspace functions quite easy.</P>
+<P>This section discusses workspace management patterns.</P>
+<P>These workspace patterns follow on the context created by the organizational structure and the architecture of the product. The configuration management structure both sets the context, and assists in the implementation of these structures.</P>
+<P ALIGN="CENTER"><IMG SRC="Image5.gif" WIDTH=397 HEIGHT=478></P>
+<B><P ALIGN="CENTER">Figure 1: Pattern Connections</P>
+<FONT SIZE=6><P>The Patterns</P>
+</FONT><FONT SIZE=5><P><A NAME="PrivateSystemBuild"><A NAME="IndependentWorkspaces"><A NAME="_Ref456666417">Independent Workspaces</A> (*)</A></P>
+</B></FONT><P>Aliases : Independent Development</P>
+<I><P>Even when you have periodic system builds (Named Stable Bases), and a means to share the latest build with the development environment, there are situations when a developer may not want to get the latest of everything. While performing a task, any change to the code base can be disruptive to the developer’s Flow.</P>
+</I><B><P>The structure of a developer’s workspace needs to balance the concerns of keeping up to date, with the needs of a developer to maintain a stable environment, thus allowing a Programming Episode to proceed smoothly. How can we balance the need for developers to build against current revisions with the desire to avoid interruptions in flow by having things they depend on from changing from underneath them, disrupting their Flow?</P>
+</B><P>Usually, it is important for developers to work with current versions of all elements of the software system. This provides them with an accurate picture of the how their code interacts with other components of the system. The benefits of working with the latest and greatest code include keeping up with the latest enhancements, and avoiding running into already fixed bugs to avoid getting out of synch with interface changes. Keeping current helps ensure steady progress and makes sure builds go smoothly.</P>
+<P>One approach to keeping developers up-to-date is to have developers either reference a common set of libraries or automatically get updates for a common set of libraries and header files, so that they will automatically get the latest of everything, except for code they are working on (ie which they have checked out of the SCM system). The reference solution saves disk space. Both solutions guarantee that the developer will always be developing against the latest build. </P>
+<P>Introducing new software into a developer’s environment while the developer is working on a problem or debugging may complicate the debugging process.  It can introduce new behavior, causing a test case to no longer reproduce the problems, hiding the problem and not fixing it. It can also distract the developer from the main task because of the time spent resolving integration issues -- in some cases, code may no longer compile due to interface changes that are not necessarily relevant to the element being debugged. This problem can also occur with artifacts other than code, such as test data, or a database schema or data set.</P>
+<P>Tasks occasionally span build intervals, though, so controlling when a developer updates their workspace can be counter productive. </P>
+<FONT FACE="Symbol"><P ALIGN="CENTER">&nbsp;</P>
+</FONT><P>Therefore:</P>
+<B><P>Provide Independent Workspaces where developers can maintain control off their development environments, This allows them to avoid having an integration step interrupt work in progress. The environment should represent a snapshot of all the software being developed in a system, not just the code the developer is modifying. Try to ensure that the private development area is not used as a means of avoiding integration issues.</P>
+</B><FONT FACE="Symbol"><P ALIGN="CENTER">¨¨¨</P>
+</FONT><P>This pattern conflicts somewhat with Incremental Integration<I> </I>when a developer delays retrieving the current release for too long, so make sure that developers are encouraged to use integrate their code frequently, perhaps by providing a mechanism for easily backing of a difficult change.</P>
+<P>A consequence of this pattern is that, depending on how this is implemented, the disk space requirements of a project may grow quickly as N developers will have their own copies of the source code. But often the costs of personnel greatly exceed the cost of an extra disk. A modification to this approach is that stable, and distantly related subsystems can be used by reference, but one should be made aware of when changes are imminent. In this case the CM system should provide access to prior <I>Named Stable Bases </I>as well. </P>
+<P>This concept can be applied to things other than souce code. Test data files, database user areas (for example, in Oracle, you can assign a Schema to a User), or the allowing a user to run a controlled private instance of a server process rather than share a common server resource.</P>
+<P>The easiest way to implement this is by starting with the latest of the Named Stable Bases, copying the build products from that build, and getting the files you will be working with, and the source for all the subsystems which your subsystem depends on, corresponding to that build. Periodically refresh the workspace with a new build or get the latest files and build the files yourself. Some developers get the latest build only rarely. A good dependency map is essential to make sure that all effected files get rebuilt.</P>
+<P>In addition to simplifying debugging, this approach also speeds development of new versions, since a developer can feel free to change an interface for a future version without waiting for everyone else to catch up.</P>
+<P>Example</P>
+<P>A developer is working on a problem The Developer Workspace is self contained with all of the files needed to build the system. Developers retrieve new files from the repository only when they are ready and the current problem is solved.</P>
+<P>Known Uses</P>
+<P>Many Development organizations.</P>
+<P>Some source control tools provide direct support for this concept. Clearcase by Pure Atria provides the concept of Views to give us this facility. The SCM tool CA/Endevor has the concept of Private Stages which allow for this. Private Stages are not available to anyone except the owner. When a private stage is "ready" the developer promotes the changes in that stage to a public stage.</P>
+<P>The "Using the Daily Build and Smoke Test" best practice in <I>Rapid Development</I> says that "developers should maintain private versions of the source files they're working on[11]."</P>
+<I><P>Branching can relate to workspaces.<BR>
+</P>
+</I><B><FONT SIZE=5><P><A NAME="_Ref456666388">Private System Build</A></A>(*)</A></P>
+</B></FONT><I><P>Developers work out of their own workspaces (Independent Workspace) There is a procedure for building the system (NamedStableBases), and there is a mechanism in place for developers to integrate their changes into the latest code set (Incremental Integration)</P>
+</I><FONT FACE="Symbol"><P ALIGN="CENTER">¨¨¨</P>
+</FONT><B><P>Some changes to the code may have wide-ranging effects. Waiting for the usual system build to test integration may make turnaround time too slow, as well as expose others to inadequately tested work.  A developer needs to verify that proposed code changes will work within the context of the existing source base.</P>
+</B><P>One way to develop software is to start from the latest public build, copying all the relevant files into your workspace. Starting from the system build saves time, but the system build may not always be as up-to-date as needed; You may have made a change which has far reaching impact (such as a change to a header file or other interface specification). You may have just checked out the latest version of 1 subsystem, without being aware that an interface or constant defined in that system has been changed, requiring a build of other subsystems.</P>
+<P> For a sufficiently complex system, it is often useful to rebuild everything from a clean environment to gauge the effect of a change.</P>
+<P>Therefore:</P>
+<B><P>Provide for a Private System Build process so that a developer can build as much of the system as possible from source. Dependencies should be well understood and documented so that a developer can easily rebuild all portions of the source tree in their Private Workspace that are affected by the change.</P>
+</B><FONT FACE="Symbol"><P ALIGN="CENTER">¨¨¨</P>
+</FONT><P>The dependencies should be encoded using a mechanism such as a Makefile or a development Workspace with dependencies defined so that rebuild of all affected packages is automatic. To do rebuild and test all of the relevant components, the developer may need access to any third party products (header These files, typelibraries, library files) can be added to the version control system or they can be made available otherwise. (Third Party Codeline, VC The World)</P>
+<B><FONT SIZE=5><P><A NAME="IncrementalIntegration">Incremental Integration</A></P>
+</B></FONT><I><P>A good starting point for a development workspace is the build products from a centralized build (Named Stable Bases). Changes to build products are made by different people in a controlled fashion (Owner Per Deliverable</I>, <I>Code Ownership</I>). <I>Since other developers are working on a project at the same time, having your changes work with the latest system build is not a good indicator of whether the next build will work. There will be occasional mismatches between units of work This can make it difficult for the integration release to work as expected, complicating  WorkIntegration.</P>
+</I><B><P>For iterative development to work well, it is necessary to make sure that components work together. Subsystems get developed at different rates. Integrating too many changes at once results in surprises that make building software harder. We need a way to integrate without surprises, allowing developers to see the effects of their changes in on parts of the source code, and also to allow individual developers to integrate with other changes which will be available in the next build.</P>
+</B><FONT FACE="Symbol"><P ALIGN="CENTER">¨¨¨</P>
+</FONT><P>One way to see if changes integrate is to submit all changes to he next build and see what happens. In some circumstances this is unavoidable because, depending on the timing of changes, unexpected changes do happen. We want to minimize the effects of this as much as possible because this is not always the most time effective, since the buildmaster is not always the best person to track down the true source of the problem, and the correct resolution. The latest build may not incorporate the changes a colleague checked in an hour ago, and it certainly will not include changes you made and want to test before checkin.</P>
+<P>Parameters to consider include:</P>
+
+<UL>
+<LI>Time. Performing an integration test on pending changes could be a very time consuming process, and building the whole system could take a while. However, you must also consider the time is spent by the build team and other members of the team resolving sources of differences after build. Also, if the build is sufficiently automated, the build can happen while the developer is otherwise engaged.</LI>
+<LI>Space. The infrastructure necessary to perform this validation may be expensive. A lot of space may be required to build the entire system. However, the cost of the disk space resources is probably small compared to the time it takes to build the system.</LI>
+<LI>Independent Workspaces can delay the moment when another developer needs to face a mismatch.</LI></UL>
+
+<B><P>Encourage developers to check their changes against the latest of all other source. Provide a mechanism to allow developers to build all the current software periodically. Developers should be discouraged from maintaining long intervals between "check-ins." Developers should also be able to build against any of the Named Stable Bases or the newest checked in software, at will.</P>
+</B><FONT FACE="Symbol"><P ALIGN="CENTER">¨¨¨</P>
+</FONT><P>In an ideal scheme a developer can build all or part of the system, using any of the <I>Named Stable Bases</I> as a starting point. The developer should then get the latest code. This makes it easy for developers to build from files that are likely to be in the release (perhaps the newest code in the revision control system's trunk) to anticipate, and allow time to correct for, incompatibilities. The goal is to avoid a "Big-Bang" integration and allow the Developmental Build to proceed smoothly. For many systems the time and space required to perform this check is small compared to the system wide effect of lost productivity when an change is not compatible.</P>
+<P>These integration builds should be done in the developers' Independent Workspaces<I> </I>to ensure that incompatible changes do not effect anyone else unnecessarily.</P>
+<P>This practice can be followed with artifacts other than code. Developers' could also have private database work areas, for example, if development is at a point where the schema is subject to change so that they can verify that the schema change does not break other code unexpectedly.</P>
+<P>If the system takes quite a while to build, the time required to validate a wide ranging change in an independent workspace may be prohibitive, but remember to factor in the costs of the time spent by other developers on the project. Balance this with <I>Private Versioning </I>to allow the developer some leeway on deciding when to integrate their new code into their environment, but do not put it off for too long. Mitigate the effects of the occasional unsuccessful system build by allowing the individual developer to control which changes they incorporate when (Independent Workspaces (*), Private System Build, Independent Workspaces). If dependencies are well understood, it is possible to realize the spirit of this pattern by not rebuilding that subset of modules which are unrelated to the module being changed.</P>
+<P>Even with Incremental Integration, a build may break because of a later change, but this is at least a way to minimize the chances.</P>
+<P>&nbsp;</P>
+<B><FONT SIZE=6><P>(The following are in draft form)</P>
+</FONT><FONT SIZE=5><P>Version Tree Top</P>
+</B></FONT><P>&lt;configure your version tree so that all components which the system depends upon are under a root&gt;</P>
+<P>What I want to get at here is "where do you branch?" <BR>
+</P>
+<B><FONT SIZE=5><P>Communications Backbone</P>
+</B></FONT><P>In a development team, even with appropriate division of work &lt;XREF?&gt; some work may require integration work to be done by another developer, including interface changes which will break the buildability of the system.</P>
+
+<UL>
+<LI>Problem</LI></UL>
+
+<P>How do you share changes with other developers?</P>
+<P>Checking files into source control may break the build. One can get around this with integration branches, but that has overhead.</P>
+
+<UL>
+<LI>Solution</LI></UL>
+
+<P>Develop a convention for sharing code changes and use it consistently. It is best to use the configuration management system for this. To avoid problems of work pending integration breaking the build, use staging branches, labels, or simply allow that a build may break over a given window. </P>
+
+<UL>
+<LI>Repeatable Build Process</LI></UL>
+
+<P>(? are there any forces arguing against this?)<BR>
+</P>
+<B><FONT SIZE=6><P>Flow</P>
+</B></FONT><P>(from Peopleware)</P>
+<P>Context:</P>
+<P>Problem: How to allow people to work effectively?</P>
+<P>Solution: Set up an environment which enables a state of Flow, where interruptions are minimized and controlled.</P>
+<P>Pattern summaries</P>
+<TABLE BORDER CELLSPACING=1 BORDERCOLOR="#000000" CELLPADDING=7 WIDTH=686>
+<TR><TD WIDTH="40%" VALIGN="TOP">
+<B><P>Pattern Name</B></TD>
+<TD WIDTH="60%" VALIGN="TOP">
+<B><P>Intent</B></TD>
+</TR>
+<TR><TD WIDTH="40%" VALIGN="TOP">
+<P>Private System Build(*)</TD>
+<TD WIDTH="60%" VALIGN="TOP">
+<P>Allow a developer to rebuild the world to see how their code affects other code. Also allows a developer to debug builds.</TD>
+</TR>
+<TR><TD WIDTH="40%" VALIGN="TOP">
+<P>Incremental Integration</TD>
+<TD WIDTH="60%" VALIGN="TOP">
+<P>Make sure developers rebuild the system with the latest of all source before checking in.</TD>
+</TR>
+<TR><TD WIDTH="40%" VALIGN="TOP">
+<P>Independent Workspaces (*)</TD>
+<TD WIDTH="60%" VALIGN="TOP">
+<P>Allow a developer to control when they introduce new &quot;stuff&quot; into their development environment.</TD>
+</TR>
+</TABLE>
+
+</BODY>
+</HTML>

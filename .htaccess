@@ -1,0 +1,40 @@
+#AddType text/x-server-parsed-html .html
+#XBitHack on tells the server to parse executable files for SSI.
+# This does not work on the mac apache server
+# note: to get website working on mac:
+# set up virtual host, chmod g+x /Volumes/iDisk
+ Options +Includes
+
+#XBitHack on
+
+RedirectPermanent /teambook/index.html http://www.berczuk.com/scm-patterns-book/
+RedirectPermanent /teambook/ http://www.berczuk.com/scm-patterns-book/
+RedirectPermanent /teambook http://www.berczuk.com/scm-patterns-book/
+RedirectPermanent /books/index.html http://www.berczuk.com/bookstore/
+RedirectPermanent /books/ http://www.berczuk.com/bookstore/
+RedirectPermanent /books/books.html http://www.berczuk.com/bookstore/
+RedirectPermanent /books http://www.berczuk.com/bookstore/
+RedirectPermanent /Resume-web.html http://www.berczuk.com/cv/Resume-web.html
+
+RedirectPermanent /oct26 http://users.rcn.com/pratt-farm/halloween/
+
+# redirect services with or without trailing slash to the html pg
+RedirectMatch /services[/*] http://www.berczuk.com/services.html
+
+Redirect /stats http://www.berczuk.com/cgi-bin/awstats.pl?config=www.berczuk.com
+
+# do this on the mac
+        AddType text/html .html
+        AddHandler server-parsed .html
+
+# redirect the old book urls (and files underneath) to the new book site
+RedirectMatch /scm-patterns-book/(.*) http://www.scmpatterns.com/$1
+
+# Let us access statistics script using a url
+#RewriteEngine on
+#RewriteBase /~berczuk/public_html/
+#RewriteRule ^/services /services.html
+
+ErrorDocument 404 http://www.berczuk.com/404.shtml
+
+ErrorDocument 500 http://www.berczuk.com/500.shtml

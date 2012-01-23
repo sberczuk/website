@@ -1,0 +1,169 @@
+BODY{ background:white;
+ 	color:black;
+	font-family:Verdana, Arial, Helvetica, Geneva, sans-serif;
+ 	margin-left:0;
+   	margin-right:0;
+   	margin-top:0;}
+   	
+   	#main {
+	/*margin: 0 0 0 0;*/
+	margin: 20px;
+	padding:0;
+	
+	background-color: white;
+	
+	
+	
+}
+
+#header {
+	margin: 0;
+	padding: 0;
+}
+
+#footer {
+	clear: both;
+	
+}
+
+#lsidebar {
+   font-size: 80%;
+	width:24%;
+	float: left;
+	margin: 0;
+	padding: 0;
+	
+	
+}
+
+#content {
+		
+	margin: 0 25% 0 25%; 
+	padding: 0px;
+	
+	
+	/*padding:20px;
+	*/
+	
+}
+
+#rsidebar {
+	float: right;
+	width: 24%;
+
+   font-size: 90%;
+	background: #00aa50;
+	margin: 0;
+	padding: 0;
+}
+
+.bodytext{margin-left:3%;
+          margin-right:3%;
+ }
+
+td.bodytext{
+	padding-left:3%;
+	padding-right:3%;
+        vertical-align="top";
+ }
+
+  span.bodytext{margin-left:3%;
+   		margin-right:3%;
+ }
+
+p.copyright{font-size:60%;}
+
+li.spaced {margin-bottom:1%}
+ 
+A{ font-style:normal;}
+A:link {color:blue;}
+A:active { color:red}
+A:visited {color:purple	}
+H1 { font-family:Verdana, Arial, Helvetica, Geneva, sans-serif;}
+H2 { font-family:Verdana, Arial, Helvetica, Geneva, sans-serif;}
+H3 { font-family:Verdana, Arial, Helvetica, Geneva, sans-serif;}
+H4 { font-family:Verdana, Arial, Helvetica, Geneva, sans-serif;}
+.sidebar { font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+	font-size:85%;
+	background:#00aa50;
+	border-color:#00aa50;
+}
+
+td.sidebar { font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+	font-size:85%;
+	background:#00aa50;
+	border-color:#00aa50;
+
+	padding-left:1%;
+	padding-right:1%;
+        vertical-align="top";
+
+}
+
+td.partners { font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+	font-size:90%;
+	background:gray;
+	border-color:grey;
+
+	padding-left:1%;
+	padding-right:1%;
+        vertical-align="top";
+
+}
+
+
+td.navbar { background: silver;
+ font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+ text-align:left;
+  font-size: 75%;
+ padding-left: 5px;
+ padding-top: 3px;
+ padding-bottom: 3px;
+ padding-right: 0;
+ text-decoration:none;
+  color: white;
+ font-weight: bold;
+ }
+
+td.navbar { background: black;
+ border:black;
+ font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+ text-align:left;
+ font-size: 75%;
+ padding-left: 5px;
+ padding-top: 3px;
+ padding-bottom: 3px;
+ padding-right: 0;
+ text-decoration:none;
+ color: white;
+ font-weight: bold;
+ }
+
+.here { background: silver;
+ font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+ text-align:center;
+ font-weight :bold;
+ padding-left: 5px;
+ padding-top: 3px;
+ padding-bottom: 3px;
+ padding-right: 5px;
+ text-decoration:none;
+  color: black;
+ font-size: 75%;
+ font-weight: bold;}
+
+
+.navarea{  margin-left: 0;
+ margin-right: 0;
+ background: black;
+ text-align:left;
+ border-color:white;}
+
+
+a.navbar { color: white;
+           text-decoration:none;}
+
+A.navbar:visited {color: #4F4FFF;}
+A.navbar:link {	color: #4F4FFF;}
+A.navbar:active {color: #4F4FFF;}
+A.navbar:hover {color: white}

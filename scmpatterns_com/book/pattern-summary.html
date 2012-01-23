@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd ">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!-- Time-stamp: "2002-11-28 12:54:57 default@OZCHECK" --> 
+<!--#if expr="\"$DOCUMENT_URI\" = /.*scm-patterns-book.*/" -->
+<!--#include virtual="/scm-patterns-book/scmsite_head.html"-->
+<!--#else -->
+<!--#include virtual="/scmsite_head.html"-->
+<!--#endif -->
+
+<!--#set var="page_path" value="SCMHOME-BOOK"-->
+<!--#set var="pagetitle" value="Pattern Summaries"-->
+<title><!--#echo var="pagetitle"--></title>
+
+<meta name="keywords" content="SCM Patterns, Berczuk, Appleton"/>
+<meta name="description" content="Summaries of the SCM Patterns"/>
+</head>
+<body>
+
+<!-- hack to allow us to have the subdir of berczuk.com and the -->
+<!--     scmpatterns.com root be the same dir -->
+<!--#if expr="\"$DOCUMENT_URI\" = /.*scm-patterns-book.*/" -->
+<!--#include virtual="/scm-patterns-book/scm_navbar.html"-->
+<!--#else -->
+<!--#include virtual="/scm_navbar.html" -->
+<!--#endif -->
+
+
+
+<div class="bodytext">
+<h1><!--#echo var="pagetitle"--></h1>
+
+<p>(Also see the <a href="/book/pattern-summary.html#PATTERN_MAP">map</a> of the pattern language.)</p>
+<table>
+<tr><th>Pattern Name</th><th>Summary</th></tr>
+<tr><td><hr/></td><td><hr/></td></tr>
+<tr><th>Mainline</th><td>Minimize merging, and keep the number of active codelines to a manageable set by developing on a Mainline.</td></tr>
+<tr><th>Active Development Line</th><td>Keep a rapidly evolving codeline stable enough to be useful by creating an Active Development Line</td></tr>
+<tr><th>Private Workspace</th><td>Prevent integration issues from distracting you, and from your changes causing others problems by developing in a Private Workspace.</td></tr>
+<tr><th>Repository</th><td>Set up a new workspace by populating it from a Repository that contains everything that you need.</td></tr>
+<tr><th>Private System Build</th><td>Check to see that your changes will not break the build by doing a Private System Build before commiting changes to the Repository.</td></tr>
+<tr><th>Integration Build</th><td>Ensure that your code base always builds reliably by doing an Integration Build periodically.</td></tr>
+<tr><th>Third Party Codeline</th><td>Manage vendor code by using a Third Party Codeline.</td></tr>
+<tr><th>Task Level Commit</th><td>Organize source code changes by task-oriented units of work.</td></tr>
+<tr><th>Codeline Policy</th><td>Create a Codeline Policy to help developers decide when to check in code to a codeline and what procedures to follow before a checkin on each codeline.</td></tr>
+<tr><th>Smoke Test</th><td>Ensure that the system still works after you make a change by running a Smoke Test.</td></tr>
+<tr><th>Unit Test</th><td>Verify that a module still works after you make a change by running a Unit Test.</td></tr>
+<tr><th>Regression Test</th><td>Ensure that existing code doesn't get worse as you make other improvements by running a Regression Test.</td></tr>
+<tr><th>Private Versioning</th><td>Use Private Versioning to allow you to experiment with complex changes locally, yet still be able to take advantage of the features of a version control system.</td></tr>
+<tr><th>Release Line</th><td>Maintain released versions without interfering with your current development by establishing a Release Line.</td></tr>
+<tr><th>Release-Prep Codeline</th><td>Stabilize a codeline for an upcomming release while also allowing new work to continue on active codelines by doing the stabilization work on a Release-Prep codeline.</td></tr>
+<tr><th>Task Branch</th><td>Have part of your team perform a disruptive task without forcing the rest of the team to work around them, using a Task Branch.</td></tr>
+</table>
+<h2 id="PATTERN_MAP" >Map of the Pattern Language</h2>
+<p><img src="/book/pattern-map.gif" width="1070" height="781" 
+alt="Map of the pattern language"/></p>
+
+</body>
+</html>

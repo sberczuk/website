@@ -1,0 +1,13 @@
+<!-- DTD for category descriptions for booklist -->
+
+<!ELEMENT categories (category*) >
+<!ELEMENT category (code, description) >
+<!ELEMENT code (#PCDATA) >
+<!ELEMENT description (#PCDATA) >
+
+
+<!ELEMENT bookshelves (bookshelf+) >
+<!ELEMENT bookshelf (name, description, isbnlist) >
+<!ELEMENT isbn (#PCDATA) >
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT isbnlist (isbn+) >

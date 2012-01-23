@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE categories SYSTEM "categories.dtd" >
+<categories>
+
+<category>
+<code>SYSTEMS</code>
+<description>Building Software Systems</description>
+</category>
+
+<category>
+<code>AGILE</code>
+<description>Agile Software Development</description>
+</category>
+
+<category>
+<code>CREATE-SOLVE</code>
+<description>Creativity and Problem Solving</description>
+</category>
+
+<category>
+<code>SW_PATTERNS</code>
+<description>Patterns in Software</description>
+</category>
+
+<category>
+<code>J2EE</code>
+<description>Web Application Development</description>
+</category>
+<!--
+
+<category>
+<code>UML</code>
+<description>The Unified Modeling Language</description>
+</category>
+-->
+
+<category>
+<code>PEOPLE</code>
+<description>Communication and People Skills</description>
+</category>
+
+<category>
+<code>ARCH_PATTERNS</code>
+<description>Patterns in Architecture</description>
+</category>
+
+
+<category>
+<code>TECHSOC</code>
+<description>Technology and Society</description>
+</category>
+
+
+
+<category>
+<code>ORGS-METHODS</code>
+<description>Organizations, Teams, Methods and Management</description>
+</category>
+
+
+<category>
+<code>SCM</code>
+<description>Software Configuration Management</description>
+</category>
+
+<category>
+<code>FICTION</code>
+<description>Fiction and other Diversions</description>
+</category>
+
+</categories>

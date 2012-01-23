@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd ">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!--#include file="scmsite_head.html"-->
+<!--#set var="page_path" value="TOP"-->
+<!--#set var="pagetitle" value="SCM Patterns Home"-->
+<!-- Time-stamp: "2002-11-21 14:02:18 default@OZCHECK" -->
+<title><!--#echo var="pagetitle"--></title>
+<!--
+<base href="/scm-patterns-book/">
+
+<link rel="stylesheet" type="text/css"    href="scm_site.css"
+title="SCMBook Style Sheet"/>
+-->
+
+
+</head>
+<body>
+<!--#include virtual="scm_navbar.html" -->
+
+<div class="bodytext">
+<h1><!--#echo var="pagetitle"--></h1>
+<p>This site contains information about how to use software
+configuration management, especially version control, effectively.
+</p>
+<h2>Recent Changes</h2>
+<ul>
+<li><img src="/NEW.gif" alt="NEW!"/>Added a publications section, which includes a <a
+href="pubs/hass_sidebar.html">sidebar</a> that we wrote for the new
+book <a
+href="http://www.amazon.com/exec/obidos/ASIN/0321117662/steveberczuk">
+Configuration Management Principles and Practice</a>.
+
+</li>
+</ul>
+
+<h2 id="BOOK">The Book</h2>
+
+
+<table>
+<tr>
+<td valign="top">
+<img src="final_cover_web.jpg" 
+alt="Book Cover for 
+Software Configuration Management Patterns, 
+By Steve Berczuk and Brad Appleton. 
+Forward by Kyle Brown" hspace="5" vspace="5" 
+height="256"
+width="204" border="1" /> <br/>
+<code>
+<br/>Book Details: <br/>
+ISBN: 0201741172 <br/>
+Copyright 2003 <br/>
+Published <b>November 2002</b> by 
+<a href="http://www.awprofessional.com/">Addison-Wesley</a>
+</code>
+</td>
+
+<td>
+<em>Software Configuration
+Management Patterns: Effective Teamwork, Practical Integration</em> by
+Steve Berczuk with Brad Appleton.
+
+<p>This book describes many of the common problems organizations face
+when using SCM in a way that is not consistent with the needs of their
+organization. The book presents the patterns organized in a pattern
+language that shows how the various structures that you need to use
+for an effective SCM system build on each other.
+</p>
+<p>You can order this book from <a
+href="http://www.awprofessional.com/titles/0201741172" title="AW Site
+for book">
+The
+AW Professional site</a>, where you can also view sample material,
+from 
+<a
+href="http://www.amazon.com/exec/obidos/ASIN/0201741172/steveberczuk">Amazon.com</a>
+or ask at your local store.
+For corporate sales contact the Addison-Wesley
+<a href="mailto:corpsales@pearsontechgroup.com">Corporate Sales</a> department.
+</p>
+
+<ul>
+<li><a href="book/praise.html">What some have said</a> about our book.</li>
+<li><a href="book/errata.html">Updates &amp; Errata</a> for the
+book.</li>
+<li>Selected <a href="book/chapters.html">chapters</a> from our book.</li>
+
+<li>A brief overview of the <a href="book/pattern-summary.html">patterns</a> 
+in the book.</li>
+<li><a href="authors/">About the Authors</a>.</li>
+
+</ul>
+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</table>
+
+
+<h2 id="COMMUNITY">Community Connections</h2>
+<h3>SCM and Release Management</h3>
+<ul>
+<li>Visit our <b><a
+href="http://www.scmpatterns.com/wiki/"
+ title="SCM Patterns Wiki">SCM Patterns Wiki</a></b>
+and help to build a knowledge base about SCM
+patterns and tools.</li>
+<li><a href="http://acme.bradapp.net">Brad Appleton's Page</a>
+has many links to SCM resources.</li>
+<li> The <a
+href="http://groups.yahoo.com/group/scm-patterns/">scm-patterns list
+on Yahoo Groups</a> is a place to discuss the patterns in the book, as
+well as other patterns. There is also a resources section. 
+</li>
+
+<li>A <a
+href="http://www.nyetwork.org/wiki/SoftwareReleaseManagement">Software
+Release Management</a> wiki maintained by Wim Kerkhoff.</li>
+
+<li><a href="http://www.stickyminds.com">StickyMinds.com</a> has a
+Configuration Management Zone. (Brad and Steve are Technical Advisors
+for the CM Zone.)</li>
+
+<li><a href="http://www.cmcrossroads.com" title="CM Crossroads">CM Crossroads</a> is an online community and resource center for Configuration Management
+hosting interactive forums, a member contributed file cabinet and a
+substantial resource links database.</li>
+<li><a href="http://cmwiki.com/">Configuration Management wiki</a> at
+CM Crossroads is a place to share information about the all aspects of
+configuration management, not just SCM or SCM patterns.</li>
+
+<li><a href="http://www.snuffybear.com/ucmcentral.htm" title="UCM
+Central">UCM Central</a>, an Australian based,  non-commercial site dedicated to Configuration Management education.</li>
+<li><a href="http://www.sdmagazine.com/">Software Development
+Magazine</a> has regular articles on agile development and process.</li>
+</ul>
+
+
+<h3>Other Places of Interest</h3>
+<ul>
+<li>The <a href="http://www.agilealliance.org">Agile
+Alliance</a>.</li>
+<li>The <a href="http://c2.com/cgi/wiki">c2.com wiki</a> which
+contains information about patterns, XP and other items of relevance
+if you are interested in agile development.</li>
+<li>The <a
+href="http://groups.yahoo.com/group/extremeprogramming/">Extreme
+Programming Group</a> at Yahoo Groups often discusses topic of
+interest to those who want to develop code quickly and effectively.</li>
+</ul>
+
+<h2>Contact Us</h2>
+
+<p>Please send comments to: <a
+href="mailto:scm-patterns-book@berczuk.com">scm-patterns-book@berczuk.com</a>
+or directly to me at <a href="mailto:steve@berczuk.com">steve@berczuk.com</a>. 
+</p>
+
+
+
+
+
+<hr/>
+<h2>Related Sites</h2>
+<!-- put this in a table with sticky minds -->
+<table width="100%">
+<tr>
+<td align="center"><a href="http://www.cmcrossroads.com"><img align="middle"
+src="/site-icons/cmctag.jpg" alt="CM Crossroads"/></a> </td>
+<td align="center"><a href="http://www.stickyminds.com"><img align="middle"
+src="site-icons/StickyMindsLogo.gif" alt="StickyMinds.com"/></a> </td>
+<td></td>
+<td align="center">
+<a href="http://groups.yahoo.com/group/scm-patterns/join">
+<img src="http://groups.yahoo.com/img/ui/join.gif" border="0" alt="join"/><br/>
+Click to subscribe to scm-patterns</a>
+</td>
+</tr>
+</table>
+</div>
+<hr/>
+  <p>
+    <a href="http://validator.w3.org/check/referer"><img
+        src="http://www.w3.org/Icons/valid-xhtml10"
+        alt="Valid XHTML 1.0!" height="31" width="88" /></a><br/>
+<a 
+href="http://validator.w3.org/check?uri=http://www.scmpatterns.com/index.html">Revalidate this page.</a>
+  </p>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+
+<!-- standard header for pages below top of berczuk.com site -->
+<!-- sub header Time-stamp: "2003-06-20 16:56:30 Stephen Berczuk@ALEWIFE-BROOK"-->
+
+<!-- To use this SSI Template define the following variables:
+     pagetitle: The title of the current page
+     page_path: The path to this page in terms of the following
+     sitemap locations:
+       HOME, COMMUNITY
+    for example: HOME-COMMUNITY 
+-->
+
+
+<!--#include virtual="/berczuk_menu.html"-->
+<tr><td class="navbar"><!-- put in the home page -->
+<!--#if expr="\"$page_path\" = /.*HOME.*/"-->
+<a class="navbar"
+href="/index.html">berczuk.com Home</a>
+<!--#elif expr="\"$page_path\" = /.*TOP/"-->
+berczuk.com Home
+<!--#endif -->
+
+<!-- put the sub paths in -->
+<!--#if expr="\"$page_path\" = /.*COMMUNITY.*/"-->
+&nbsp;<img 
+src="/site-icons/triangle.gif" 
+align="bottom" alt="&gt;" title="&gt;"/>&nbsp;
+<a href="/community/"  class="navbar" title="Community Links">Community</a>
+<!--#endif -->
+
+<!--#if expr="\"$page_path\" = /.*CATS.*/"-->
+&nbsp;<img 
+src="/site-icons/triangle.gif" 
+align="bottom" alt="&gt;" title="&gt;"/>&nbsp;
+<a href="/cats/"  class="navbar" title="Cat Pictures">Cats</a>
+<!--#endif -->
+
+
+<!--#if expr="\"$page_path\" = /.*-DOHERTY.*/"-->
+&nbsp;<img 
+src="/site-icons/triangle.gif" 
+align="bottom" alt="&gt;" title="&gt;"/>&nbsp;
+<a href="/doherty/"  class="navbar" title="Doherty HS
+Resources">Doherty HS</a>
+<!--#endif -->
+
+<!--#if expr="\"$page_path\" = /.*BOOKSTORE.*/"-->
+&nbsp;<img 
+src="/site-icons/triangle.gif" 
+align="bottom" alt="&gt;" title="&gt;"/>&nbsp;
+<a href="/bookstore/"  class="navbar" title="Suggested
+Books">Suggested Books</a>
+<!--#endif -->
+
+<!--#if expr="\"$page_path\" = /.*RESUME.*/"-->
+&nbsp;<img 
+src="/site-icons/triangle.gif" 
+align="bottom" alt="&gt;" title="&gt;"/>&nbsp;
+<a href="/cv/"  class="navbar" title="Resume">Resume</a>
+<!--#endif -->
+
+<!--#if expr="\"$page_path\" = /.*DEMOS.*/"-->
+&nbsp;<img 
+src="/site-icons/triangle.gif" 
+align="bottom" alt="&gt;" title="&gt;"/>&nbsp;
+<a href="/cv/demos"  class="navbar" title="Demos">Demos</a>
+<!--#endif -->
+
+<!--#if expr="\"$page_path\" = /.*EVENTS.*/"-->
+&nbsp;<img 
+src="/site-icons/triangle.gif" 
+align="bottom" alt="&gt;" title="&gt;"/>&nbsp;
+<a href="/events/"  class="navbar" title="Events">Events</a>
+<!--#endif -->
+
+
+<!--#if expr="\"$page_path\" = /.*SomethingElse.*/"-->
+<!--#endif -->
+
+<!--#if expr="\"$page_path\" !=\"TOP\""-->
+<!-- Insert the description of the current page -->
+&nbsp;<img 
+src="/site-icons/triangle.gif" align="bottom" alt="&gt;" title="&gt;"/>&nbsp;
+<!--#echo var="pagetitle"-->
+<!--#endif -->
+</td></tr></table>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd ">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!-- Time-stamp: "2003-08-15 09:14:11 Stephen Berczuk@ALEWIFE-BROOK" -->
+
+<!--#if expr="\"$DOCUMENT_URI\" = /.*scm-patterns-book.*/" -->
+<!--#include virtual="/scm-patterns-book/scmsite_head.html"-->
+<!--#else -->
+<!--#include virtual="/scmsite_head.html"-->
+<!--#endif -->
+
+<!--#set var="pagetitle" value="Book Updates"-->
+<!--#set var="page_path" value="SCMHOME-BOOK"-->
+
+<title><!--#echo var="pagetitle"--></title>
+
+
+<link rel="stylesheet" type="text/css"    href="/scm_site.css"
+title="SCMBook Style Sheet"/>
+
+<!-- styles for errata entries -->
+<style type="text/css">
+<!--
+span.book_text{font-family:courier, monospace;}
+-->
+</style>
+</head>
+<body>
+
+<!-- hack to allow us to have the subdir of berczuk.com and the -->
+<!--     scmpatterns.com root be the same dir -->
+<!--#if expr="\"$DOCUMENT_URI\" = /.*scm-patterns-book.*/" -->
+<!--#include virtual="/scm-patterns-book/scm_navbar.html"-->
+<!--#else -->
+<!--#include virtual="/navbar.html" -->
+<!--#endif -->
+
+<div class="bodytext">
+<h2>Printing History</h2>
+<ul>
+<li>First Printing: November 2002</li>
+<li>Second Printing: January 2004</li>
+</ul>
+<h2>Missing Artwork </h2>
+
+<p>Some copies from the second printing were distributed with missing
+artwork. Addison-Wesley has recalled the books with this problem, and
+will also replace any copies with this error. If you would like to see
+the pages with the missing images, you can <a
+href="ftp://ftp.pearsoned.com/Berczuk.Art/">download them</a>. (The
+files are names <em>pageNumber</em>.pdf).</p>
+
+<h2>Errata</h2>
+<p>The following table shows the corrections that we know need to be
+made. 
+  <!--#config timefmt="%A %B %d, %Y" -->
+This file was last modified on <em><!--#echo var="LAST_MODIFIED"
+	  --></em>. If you see something that we missed, please send
+	me a note at steve@berczuk.com</p>
+<table border="1" width="80%">
+<tr><th colspan="3" align="center">
+ Errata from the Second Printing.
+</th>
+</tr>
+<tr><th>Page</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>167</td><td><a href="http://www.cmpic.com/cmresourceguide.htm" title="">Steve Easterbrook's Resource Guide</a> has an updated link. (Added 2011-03-30)</td></tr>
+<tr>
+<td>xxviii</td><td>Last sentence of the first full paragraph:  <span class="book_text">
+A codeline contains every <del>version</del> of every artifact along
+	      one evolutionary path.
+</span> should be
+	    <span class="book_text">A codeline contains every <ins>revision</ins> of every artifact along one evolutionary path.</span></td>
+</tr>
+
+<tr>
+<td>107</td><td>In item 3,  <span class="book_text">will use the code from <del>of</del> the branch</span> should be <span class="book_text">will use the code from the branch</span></td></tr>
+</table>
+
+<br/>
+<table border="1" width="80%">
+<tr><th colspan="3" align="center">
+ Errata from the First Printing, November 2002
+</th>
+</tr>
+<tr><th>Page</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>xi, xii</td><td>All figure titles should <em>not</em> have a period at
+the end.</td></tr>
+<td>xvii</td><td><ul>
+<li>Third line from the bottom. Change 
+<span class="book_text"><del>practice is the not the</del> silver bullet </span>to
+<span class="book_text"><ins>practice is not the</ins> silver
+bullet</span>. </li>
+
+<li>
+All figure titles should <em>not</em> have a period at
+the end.</li></td></tr>
+<tr><td>xviii</td><td>We mispelled Karl Wiegers name. It should be
+changed from <span class="book_text"><del>Weigers</del></span> to <span class="book_text"><ins>Wiegers</ins></span></td></tr>
+<tr>
+<td>xxi</td><td>First sentence of About the Photos should read: The
+Photos that start <em>all but two chapters</em>...</td></tr>
+<tr><td>xxiv</td>
+<td>In the paragraph on the top of the page, change 
+<span class="book_text">
+<del>developer<b>s</b>-cum-project-lead</del></span>. 
+It 
+should read: 
+<span class="book_text">
+<ins>developer-cum-project-lead</ins></span>.
+</td></tr>
+<tr>
+<td>xxv</td><td>One of the names in the acks list is spelled
+wrong. The correct spelling is Heini
+<em>Aarela.</em> Also <del>Thomas Dave</del> should be <ins>Dave
+Thomas</ins>. And, the last paragraph should be deleted: <del>And last, I must thank...</del></td>
+
+</tr>
+<tr>
+<td>xxx,xxxi</td><td><em>ToolsDev</em> and <em>ThirdParty</em> should
+start with a leading slash mark. For example: <em>/ThirdParty</em>
+because they are the names for a codeline. For all Figures: Codeline
+starting boxes should all have a heavy-weight box.</td><td></td>
+</tr>
+<tr><td>xxxii</td><td>In Table I-1, the description for the first
+symbol. Change 
+<span class="book_text"><del>has an <b>indentifying</b>
+name</del></span>
+to 
+<span class="book_text">
+<ins>has an identifying name</ins></span>.</td></tr>
+
+<tr><td>21</td><td>The last line on the page: change 
+<span class="book_text"><del>that may cause too</del></span> to 
+<span class="book_text"><ins>that may add too</ins></span></td></tr>
+<tr>
+<td>25</td><td>Last line: insert &quot;programming&quot; before
+&quot;language&quot; (should read: <em>programming</em> language, and choice of
+database.)</td><td></td> </tr>
+
+
+<tr><td>52</td><td>Figure 4-2. The boxes that indicate the start of
+the codelines should have a heavier line, line Table I-1 indicates.</td></tr>
+<tr><td>55</td><td>Figure 4-3: Rel1-Maint should have a / before it:
+<ins>/</ins>Rel1-Maint)</td></tr>
+<tr><td>61</td><td>Figure 5-1: There seems to be something extra
+before &quot;They Edit&quot;</td></tr>
+<tr><td>75</td><td>4th para change &quot;<em>Setting</em> up the workspace
+<em>would</em> always&quot; to &quot;<em>Set</em> up the workspace
+<em>to</em> always&quot;</td></tr>
+<tr><td>108</td><td>Figure 10-2The boxes that indicate the start of
+the codelines should have a heavier line, line Table I-1 indicates.</td></tr>
+<tr><td>126</td><td>Last Sentence: &quot;Task Branch&quot; should be
+styled as a pattern reference: <em>Task Branch(19)</em>.</td></tr>
+<tr><td>150</td><td>Figure 17-3. The boxes that indicate the start of
+the codelines should have a heavier line, line Table I-1 indicates.</td></tr>
+<tr><td>150</td><td>At the start of the Story change the first word to
+<span class="book_text">Mainline-<ins>only</ins></span></td></tr>
+<tr><td>151</td><td>Figure 17-4. The boxes that indicate the start of
+the codelines should have a heavier line, line Table I-1 indicates.</td></tr>
+<tr><td>156 </td><td>Figure 18-1. The boxes that indicate the start of
+the codelines should have a heavier line, line Table I-1
+indicates. Also add a new codeline start with the name
+&quot;/main&quot; before the &quot;Prepare for Branching&quot; activity.</td></tr>
+
+<tr><td>159</td><td>Figure 19-1. The boxes that indicate the start of
+the codelines should have a heavier line, line Table I-1 indicates.</td></tr>
+<tr><td>160</td><td>Figure 19-2. The boxes that indicate the start of
+the codelines should have a heavier line, line Table I-1 indicates.</td></tr>
+<tr><td>161</td><td>Figure 19-3. The boxes that indicate the start of
+the codelines should have a heavier line, line Table I-1 indicates.</td></tr>
+<tr><td>194</td><td>Third Bullet from the bottom: move &quot;can be
+found&quot; to just before the &quot;at&quot;</td></tr>
+
+<tr><td>205</td><td>We mispelled Karl Wiegers name in the
+bibliography.  <span class="book_text"><del>Weigers</del>, Karl E.
+</span> should be <span class="book_text"><ins>Wiegers</ins>, Karl E.</span></td></tr>
+
+</table>
+</div>
+</body>
+
+</html>

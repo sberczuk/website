@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+      <!-- Time-stamp: "2002-11-21 21:07:23 default@OZCHECK"-->     
+  <link rel="stylesheet" type="text/css" href="/spb_site.css"
+  title="Steve B Style Sheet">
+<!--#set var="page_path" value="HOME"-->
+<!--#set var="pagetitle" value="Page Not Found"-->
+
+  <title>404 - Page Not Found</title>
+                                  
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+          
+
+</head>
+<body>
+<!--#include virtual="/berczuk_navbar.html"-->         
+   
+<div class="bodytext">    
+<h1>Page Not Found</h1>
+     
+<p>   The page that you requested:<code> 
+&quot;<!--#echo var="REQUEST_URI"-->&quot;</code>  was not found on this site. Please check the spelling, including the
+ case. If you got this message while clicking on a link from within
+ berczuk.com, and you think that there is an error on our website,
+ you can contact the <a href="mailto:webmaster@berczuk.com">webmaster</a>. 
+</p>
+<!--#if expr="\"$REQUEST_URI\" = /.*scm-patterns-book.*/" -->
+<p>If you were trying to reach a page in the
+<code>scm-patterns-book</code> directory please note that we put those
+pages in the <code>www.scmpatterns.com</code> domain. You should have
+been able to get to those pages through
+<code>www.berczuk.com/scm-patterns-book</code>, but in case we missed
+something you can try to access the page by removing the
+scm-patterns-book part of the path. For example: instead of 
+<code>www.berczuk.com/scm-patterns-book/apage.html</code> try
+<code>www.scmpatterns.com/apage.html</code>.
+</p>
+<!--#endif -->
+
+<p>Return to the <a href="/">Home page</a>.
+   </div>
+   
+</body>
+</html>

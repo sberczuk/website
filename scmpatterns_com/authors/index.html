@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd ">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!-- Time-stamp: "2002-12-16 10:06:15 default@OZCHECK" -->
+
+<!--#set var="pagetitle" value="About the Authors"-->
+<!--#set var="page_path" value="SCMHOME-BOOK"-->
+
+<title><!--#echo var="pagetitle"--></title>
+
+<!--#if expr="\"$DOCUMENT_URI\" = /.*scm-patterns-book.*/" -->
+<!--#include virtual="/scm-patterns-book/scmsite_head.html"-->
+<!--#else -->
+<!--#include virtual="/scmsite_head.html"-->
+<!--#endif -->
+
+
+</head>
+<body>
+<!-- hack to allow us to have the subdir of berczuk.com and the -->
+<!--     scmpatterns.com root be the same dir -->
+<!--#if expr="\"$DOCUMENT_URI\" = /.*scm-patterns-book.*/" -->
+<!--#include virtual="/scm-patterns-book/scm_navbar.html"-->
+<!--#else -->
+<!--#include virtual="/scm_navbar.html" -->
+<!--#endif -->
+
+<h1><!--#echo var="pagetitle"--></h1>
+
+<div class="bodytext">
+<table>
+<tr>
+<td align="center">
+<img src="steve2007.jpg" alt="Photo of Steve Berczuk" width="112" height="169" border="0" />
+</td>
+
+<td align="center"><img src="bradapp2007.jpg" alt="" width="144" height="169" border="0" alt="Photo of Brad Appleton"/></td>
+
+</tr>
+<tr>
+<td valign="top">
+<center><b>Steve Berczuk</b></center><br/>
+Steve has been developing object-oriented software applications since
+1989, often as part of geographically distributed teams. He has been
+an active member of the Software Patterns community since the first
+PLoP conference in 1994, and did early work on the relationship
+between organization, software architecture, and design patterns. He
+has an M.S. in Operations Research from Stanford University and an
+S.B. in Electrical Engineering from MIT. 
+
+</td>
+
+<td valign="top">
+<center><b>Brad Appleton</b></center><br/>
+Brad has been a software developer since 1987 and has extensive
+experience using, developing, and supporting SCM environments for
+teams of all shapes and sizes. A former Patterns++ section editor for
+the C++ Report, Brad is also well versed in object-oriented design and
+agile software development, and cofounded the Chicago Patterns and
+Chicago Agile Development Groups. He holds an M.S. in Software
+Engineering and a B.S. in Computer Science and Mathematics.  
+
+</td>
+</tr>
+</table>
+
+
+</body>
+</html>
