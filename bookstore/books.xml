@@ -29,6 +29,25 @@
 
 -->
 <!-- todo: change XSL to handle links -->
+
+<book status="new" scmsite="no">
+        <title>Just My Type</title>
+    <isbn>1592406521</isbn>
+    <authors>Simon Garfield</authors>
+
+    <imageURL>cover/1592406521.jpg</imageURL>
+    <categories>
+                <category>CREATE-SOLVE</category>
+            
+		    </categories>
+    <comments>
+   Since typography is a highly visible part of user experience, it is an area  anyone who builds applications with user interfaces should be familiar with. This book is full of history, facts, and trivia, and pointers to where to find more information. Typography geeks will find many references to familiar facts and sources as well as updated information. Those who are not familiar with some of the classics of typography will learn enough to get a sense of whether they want to learn more. Everyone will discover much about fonts and typography to inform decisions about what font to use when the next open a rich-text editor.  Everyone who uses fonts, who is not otherwise schooled in typography should give this book a look. And even those who are experts may benefit from Garfield's perspective. 
+    </comments>
+    <seeAlso>
+  <isbn>0195024028</isbn>
+     
+    </seeAlso>
+</book>
 <book status="new" scmsite="no">
         <title>The Lean Startup</title>
     <isbn>0307887898</isbn>
