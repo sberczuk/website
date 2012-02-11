@@ -74,26 +74,30 @@
 				<string>DefaultTab</string>
 			</dict>
 			<dict>
-				<key>StateType</key>
-				<string>PreviewTab</string>
-			</dict>
-			<dict>
 				<key>DocumentURL</key>
 				<string>file://localhost/Users/berczuk/coding/website/pubs/index.html</string>
 				<key>StateType</key>
 				<string>DefaultTab</string>
 			</dict>
 			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/berczuk/coding/website/events/boston/agile101.html</string>
 				<key>StateType</key>
-				<string>PreviewTab</string>
+				<string>DefaultTab</string>
 			</dict>
 			<dict>
 				<key>StateType</key>
 				<string>PreviewTab</string>
+				<key>Title</key>
+				<string>&lt;!--#echo var="pagetitle"--&gt;</string>
+				<key>URL</key>
+				<string>file:///Users/berczuk/coding/website/events/boston/agile101.html</string>
 			</dict>
 			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/berczuk/coding/website/events/index.html</string>
 				<key>StateType</key>
-				<string>PreviewTab</string>
+				<string>DefaultTab</string>
 			</dict>
 		</array>
 	</dict>
