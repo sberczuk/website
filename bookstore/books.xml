@@ -31,6 +31,28 @@
 <!-- todo: change XSL to handle links -->
 
 <book status="new" scmsite="no">
+        <title>	</title>
+    <isbn>0984521402</isbn>
+    <authors>David J Anderson</authors>
+
+    <imageURL>cover/0984521402.jpg</imageURL>
+    <categories>
+                <category>AGILE</category>
+                <category>ORGS_METHODS</category>
+               
+		    </categories>
+    <comments>
+    Kanban is an informative book, but one that could be more tightly written.  I learned a lot from reading this book, but the presentation sometimes made it harder than it could have. It clearly explains the basics of Kanban and how to apply it to software developments well as  both how a Kanban approach differs, and can be used to support,   Agile methods such as Scrum. The anecdotes and examples in the book help you to understand how to apply Kanban in real projects in organizations of varying sizes, and the takeaways section at the end of each chapter has a concise summary of what the chapter discussed.  On the other hand, some of the anecdotes were a bit long and rambling,  and contrasted sharply with other very well focused sections. This would have been a much better book had the author either kept the anecdotes briefer, or started the longer anecdotes with some more guidance about what we might expect to learn from the subsequent story.
+     If you are willing to skim a bit (and occasionally backtrack) you can get a lot of value from this book if you want to learn about Kanban. This is a good book. It could have been a much better one.
+    </comments>
+    <seeAlso>
+  <isbn>073561993X</isbn>
+  <isbn>0321278658</isbn>
+      
+    </seeAlso>
+</book>
+
+<book status="new" scmsite="no">
         <title>Just My Type</title>
     <isbn>1592406521</isbn>
     <authors>Simon Garfield</authors>
