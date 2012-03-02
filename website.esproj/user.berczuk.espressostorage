@@ -21,8 +21,7 @@
 	<dict>
 		<key>ExpandedURLs</key>
 		<array>
-			<string>file://localhost/Users/berczuk/coding/website/pubs</string>
-			<string>file://localhost/Users/berczuk/coding/website/test</string>
+			<string>file://localhost/Users/berczuk/coding/website/events/boston</string>
 		</array>
 	</dict>
 	<key>com.macrabbit.Espresso.Publisher.DisclosureCollapsed</key>
@@ -98,6 +97,10 @@
 				<string>file://localhost/Users/berczuk/coding/website/events/index.html</string>
 				<key>StateType</key>
 				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>StateType</key>
+				<string>PreviewTab</string>
 			</dict>
 		</array>
 	</dict>
