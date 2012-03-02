@@ -7,7 +7,7 @@
 	<key>ESProjectWindowState</key>
 	<dict>
 		<key>ContentSize</key>
-		<string>{1732, 705}</string>
+		<string>{1982, 951}</string>
 		<key>ProjectURL</key>
 		<string>file://localhost/Users/berczuk/coding/website/website.esproj/</string>
 		<key>StateType</key>
@@ -97,6 +97,10 @@
 				<string>file://localhost/Users/berczuk/coding/website/events/index.html</string>
 				<key>StateType</key>
 				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>StateType</key>
+				<string>PreviewTab</string>
 			</dict>
 			<dict>
 				<key>StateType</key>
