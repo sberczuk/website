@@ -102,7 +102,7 @@
     {
         "date": "March 2008",
         "parsedDate": "2008.03.27",
-        "description": ")n March 27, 2008 I spoke about Developer workspaces and agility. Workspace Management is often an afterthought for teams, agile or not. For teams to work effectively developers need machanisms to help ensure that their changes will integrate well with others' work. Good workspace practices also improve team productivity by avoiding works for me conversations and by decreasing ramp up times when people start new projects. This talk will discuss some of the patterns and practices for workspace management that you can apply to help developers be more effective.",
+        "description": "On March 27, 2008 I spoke about Developer workspaces and agility. Workspace Management is often an afterthought for teams, agile or not. For teams to work effectively developers need machanisms to help ensure that their changes will integrate well with others' work. Good workspace practices also improve team productivity by avoiding works for me conversations and by decreasing ramp up times when people start new projects. This talk will discuss some of the patterns and practices for workspace management that you can apply to help developers be more effective.",
         "title": "Developer Workspaces Enable Agile Teams",
         "venue": "New England Agile Bazaar (now Agile New England)",
         "venueLink": "",
@@ -201,8 +201,8 @@
     {
         "date": "September 2004",
         "parsedDate": "2004.09.01",
-        "description": "September 2004: I was a shepherd for , the 10th Pattern Language of Programs Conference.",
-        "title": "Shepherd for , the 10th Pattern Language of Programs Conference.",
+        "description": "September 2004: I was a shepherd for the 10th Pattern Language of Programs Conference.",
+        "title": "Shepherd for the 10th Pattern Language of Programs Conference.",
         "venue": "The 2004 Pattern Languages of Programs Conference",
         "venueLink": "http://hillside.net/plop/2004/",
         "documentLink": ""
@@ -210,8 +210,8 @@
     {
         "date": "June 2004",
         "parsedDate": "2004.06.01",
-        "description": "I lead a peer-to-peer session, at the in Salt Lake City, UT (June 22-26, 2004)",
-        "title": "I lead a peer-to-peer session, at the in Salt Lake City, UT (June 22-26, 2004)",
+        "description": "I lead a peer-to-peer session at the 2004 Agile Development Conference in Salt Lake City, UT (June 22-26, 2004)",
+        "title": "I lead a peer-to-peer Session",
         "venue": "2004 Agile Development Conference",
         "venueLink": "http://www.agiledevelopmentconference.com",
         "documentLink": "http://www.agiledevelopmentconference.com/schedule/peertopeer.html#PP1"
@@ -219,7 +219,7 @@
     {
         "date": "October 2003",
         "parsedDate": "2003.10.01",
-        "description": "October 2003: I moderated a panel discussion at in Anaheim, CA.",
+        "description": "October 2003: I moderated a panel discussion at OOPSLA 2003 in Anaheim, CA.",
         "title": "What's so eXtreme About Doing Things Right?",
         "venue": "OOPSLA 2003",
         "venueLink": "http://www.oopsla.org/oopsla2003",
@@ -228,7 +228,7 @@
     {
         "date": "June 2003",
         "parsedDate": "2003.06.01",
-        "description": "June 2003: I gave a tutorial on at the in Salt Lake City, UT (June 25-28, 2003). You can view the from the tutorial.",
+        "description": "June 2003: I gave a tutorial on SCM Patterns at the 2003 Agile Development Conference in Salt Lake City, UT (June 25-28, 2003). You can view the from the tutorial.",
         "title": "Patterns for Agile Software Configuration Management",
         "venue": "The 2003 Agile Development Conferece",
         "venueLink": "http://www.agiledevelopmentconference.com",
