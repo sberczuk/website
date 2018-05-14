@@ -1,7 +1,8 @@
 website
 =======
 
-My Web Site
+My personal Web Site http://www.berczuk.com
+
 
 # Updating
 rsync -a website/ user@host:path_to_home/public_html
