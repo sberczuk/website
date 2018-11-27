@@ -11,11 +11,12 @@ import {ProfEvent} from '../profEvent'
   styleUrls: ['./profEvents.component.css']
 })
 export class ProfEventsComponent implements OnInit {
-  profEvents: ProfEvent[] = [
-    {title: "boopBeep1", description: 'SandStorm1'},
-    {title: "boopBeep2", description: 'SandStorm2'},
-    {title: "boopBeep3", description: 'SandStorm3'},
-  ]
+  profEvents: ProfEvent[]
+    //= [
+  //   {title: "boopBeep1", description: 'SandStorm1'},
+  //   {title: "boopBeep2", description: 'SandStorm2'},
+  //   {title: "boopBeep3", description: 'SandStorm3'},
+  // ]
 
 
  //profEvents: ProfEvent[]
