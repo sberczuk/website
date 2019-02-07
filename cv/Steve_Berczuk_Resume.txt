@@ -1,84 +1,93 @@
-
-Steve Berczuk
-steve@berczuk.com   www.berczuk.com
-
-
-Profile
-Expert in agile software development and release management with over 20 years of experience delivering enterprise applications through multiple release cycles. Demonstrated ability to understand and improve legacy code and to become proficient at new technologies quickly. Skilled at leading teams, mentoring team members, developing architecture, design, and requirements, and establishing lightweight software configuration management and release processes to enable organizations to build stable products quickly. Effective at removing technical and process impediments. Author of Software Configuration Management Patterns: Effective Teamwork, Practical Integration (2002). Certified Practicing Scrum Master, and frequent presenter at user groups and conferences, and frequent contributor to software quality oriented publications. Blog: www.berczuk.com/blog/ Twitter: @sberczuk.
+Stephen P Berczuk
+40 Teel St	http://www.berczuk.com
+Arlington, MA 02474-5513	Twitter: @sberczuk  LinkedIn:steveberczuk
+Phone: 617 699 0208	Email: steve@berczuk.com
+A hands-on, collaborative technical leader with a track record of delivering products and building teams. Expert in agile software development processes and technical methods who can contribute to a team as a developer, process coach, or manager.   Author of Software Configuration Management Patterns: Effective Teamwork, Practical Integration. Contributor at techwell.com, Certified Scrum Master. Demonstrated ability to help improve teams’ delivery, understand and improve legacy code and to become proficient at new technologies quickly.  
 Experience
-Engineer, Humedica; Boston, MA — November 2008 - Present
-Develop a SaaS-based clinical informatics application, with a focus on agile techniques including unit testing and continuous integration. Develop code using  Java, Flex, and Python languages and the Spring, FlexUnit, and Swiz frameworks.  Reworked the Flex front end and Java webapp architecture to improve robustness, configurability, and testability.
-ScrumMaster for project teams, run release retrospectives, and develop and help to maintain build , release management, and automated testing processes. Help maintain builds using Maven and Atlassian tool suite (Jira, Bamboo, Nexus).
-Technical Lead, Cyrus Innovation; Boston, MA — Jan 2008-Sep 2008
-Technical Lead and Scrum Master for the Boston office of a New York City based agile consultancy, managing a team of 4 engineers on client site. Coached team members, provided training in agile methods and SCM techniques to clients, develop code in Java, J2EE, Webwork and Hibernate as part of an XP-Team using Pair Programming, TDD, and Continuous Integration. Assisted with business development activities for Boston office.	
-Sr Software Engineer, FAST; Needham, MA— Jan 2006 - Aug 2007
-Technical Lead, Scrum Master, and hands on manager for a team developing and e-commerce search application. Developed code, participated in release planning and management and served as Scrum Master for a team developing an e-commerce application using the FAST platform and Java, J2EE, Spring, and Struts. Helped other teams apply Scrum and use Maven, Cruise Control, CVS, Jira and Confluence effectively. 
-Sr Software Engineer, Iron Mountain; Boston, MA — Jun 2004 - Dec 2005
-Developed software for a Digital Archives application. Developed automated build and deployment scripts and influenced Release and Configuration Management best practices. Introduced Scrum to the organization, and served as Scrum Master and automation evangelist. Roles included:
+OUTFRONT Media (Boston MA)	Principal Software Engineer 	Sep 2017 - Present
+Develop tools and software for the CI/CD pipeline to test and deploy services for ONSmart digital advertising platform for transit.  
+Lead, Infrastructure Team: Build Services to support scheduling of advertising campaigns. Scrum Master, Developer (Java, DropWizard). Lead a multi-site team of 5 developers and contractors while working closely with teams across the engineering organization.
+Member, Deliver Team: Develop tools to support CI/CD and Integration Testing. Jenkins using Spinnaker, AWS, Kubernetes. (Node JS, Groovy Java. Postman, Codacy. ) Work across teams to improve API testing.
+Tetrascience (Boston MA)	Senior Software Engineer	March 2018 - July 2018
+Data Integration for Labs startup. Work on informatics platform, deployed on AWS, writing code in NodeJS. Introduced a Scrum process that enabled my team be more productive and meet a looming deadline (April 2018).
+Fitbit (Boston MA)	Principal/Staff Software Engineer	Jul 2013-March 2018
+Helped to form the Boston office of Fitbit, as the first developer and technical lead for the Commerce team, and have served in other roles as needed to help improve the effectiveness of the Boston office. Also served as  agile coach (technical and process), and give training classes. Developed code using Java, Spring, and MySQL, Python and Groovy.  Worked on developing and improving build, deployment and developer testing processes. (Gradle, Jenkins, Puppet,  Aurora).
+Roles included:
+Senior contributor for the eCommerce and Customer Support Tools Team (9/17-3/18) Work across teams to address architectural and process challenges and delivering code.
+Manager, Software Test Engineering Team (12/15 -7/17) Responsible for supporting teams efforts to better test applications and services by testing, training, and developing frameworks, and working with builds and operations and infrastructure. Responsible for hiring.
+Backend Lead, Community Application POC (9/15-12/15). Bootstrapped a new application as part of a small team using Java, Spring Boot.
+Agile Coach,  Analytics Infrastructure Team (7/15-9/15). Worked with team and stakeholders to improve delivery until we hired a dedicated Scrum Master.
+Developer + Engineering Manager (4/15-7/15). Commerce Developer, mentored new tech lead, and managed 4 engineers on various teams.
+Technical Lead, eCommerce Team (7/13-4/15). Java(Spring) web and batch applications for fulfillment, payments, and customer support tools.  Developed payment processor framework to support domestic and international stores, and technical point of contact for all store development. Also established Scrum process for teams in Boston.
+Humedica (Boston MA) 	Engineer	Nov 2008 – Jul 2013
+Developed software for healthcare analytics applications and tools, served as Scrum Master for project teams, and maintained build in Maven.  Supported repository and release management, and automated testing processes. I was one of the first 15 employees, and one of the first 6 members of the engineering team.
+Primary developer for Electronic Health Records ingestion system (Java, Spring Batch)
+Primary developer for Data Quality Portal application (Groovy, Grails, JavaScript)
+Developer for Analytics Application (Flex, Java)
+Cyrus Innovation (Boston MA)  	Technical Lead, Scrum Master	Jan 2008 – Sep 2008
+Technical Lead for the Boston office of a New York City based agile (XP) consultancy. Coach team members, provide training in agile methods and SCM techniques to clients, develop code. Supported business development activities. Managed a team of 4 engineers at primary client, and supported other clients. Developed code in Java, J2EE, and Hibernate using XP Practices (Pair Programming, TDD, Continuous Integration).
+Fast Search and Transfer (Needham, MA) Sr Software Engineer	Jan 2006 – Aug 2007
+Technical Lead and ScrumMaster for a search application development team for eCommerce applications built on the FAST platform. Java, J2EE. Managed a team of 4 engineers, serving as Coach and Mentor.
+Developed application components in Java and provided support for customers and solutions team.
+Developed build and release management system using Maven, Cruise Control and CVS.
+Consulted with other application teams on applying Scrum and using Jira and Confluence effectively.
+Boston R&D Operations were shut down.
+Iron Mountain (Boston, MA)	Sr Software Engineer	Jun 2004 – Dec 2005
+Developed software for a Digital Archives application, including automated build and deployment scripts. Improved Release and Configuration Management practices. Introduced Scrum. Scrum Master and automation evangelist.
 Developer, Sustaining Team. Fixed software problems and wrote deployment and administration tools.
-Developer, Digital Archives. Developed application software and build scripts. Technical resource for J2EE frameworks (Struts/Tiles, JSTL), testing frameworks, and build/integration tools (ANT, Maven, MKS). Assisted team lead with task management and Scrums
-Technical Lead for next generation Digital Archives reference architecture project. Designed and developed framework components in Java using J2EE and the Spring Framework.
-Technical Lead for application to convert proprietary format messages to RFC2822 format for archiving. Developed code in Java and Perl. Worked with QA and operations to improve deployment.
-Independent Consultant — Aug 2002-Jun 2004
-Software development, Scrum, and Build and Release management consulting.
-Perceptive Informatics (Feb 2004- Jun 2004) . Contractor and Member of a 3 person team developing a web application interface to configure the Oracle database for a clinical trial management IVR system using Java, and J2EE technologies (JSP, JSTL, Struts, Tiles), and the Torque ORM framework.
-Aliaswire (Aug 2003-Feb2004) Led the development of the telephone (VXML) interface for a telephone and web based bill presentment and payment application using Java, VXML, Oracle,  J2EE technologies, Tomcat and Eclipse for this early stage start-up.  Managed a 3-person team and developed a testing infrastructure for voice and web applications.
-Silverlink Communications Oct – Nov 2002: Set up infrastructure and developed a server monitoring tool in Java for a health care VXML application.  
-Writing and Training: Presented tutorials on using agile development techniques at conferences and to clients. Regular columnist at CMCrossroads.com.  Technical Advisor for StickyMinds.com. Set up a wiki for a high school computing class. Taught classes on web design to high school students.
-Developer, Skyva International; Medford, MA — Jun 2001-Aug 2002
-Developed Java applications for business process modeling, and service management applications. Developed requirements  and prototyped web services applications for the Skyva application. Focused on run time configuration issues. Developed tooling for configuring RDB to Object mappings for an Oracle DB using IBM San Francisco Framework and Java. Practiced and evangelized agile development approaches. Wrote ANT scripts and assisted with build and configuration management processes.
-Technical Lead,  iPhrase Technologies; Cambridge MA — Oct 2000-May 2001
-Developed presentation software and automated verification tools using Python, Java, C++ , XSLT, CSS, and for 2 release cycles of a web-based natural language search engine that ran on Windows and Unix platforms. Introduced and applied agile development techniques. Supervised 1 Engineer.
-Sr Software Engineer,  Verbind; Lexington MA — Jul 1999-Oct 2000
-Developed software in C++ for a Customer Relationship Management (CRM) System. using C++.  Technical Lead. Supervised 1 engineer. Facilitated agile development process in the company including requirements and design processes. Developed build and release scripts and assisted with configuration management process.
-Sr Software Engineer, Netsuite; Concord, MA — Oct 1998- Jul 1999
-Developed Software in C++ and Visual Basic for a enterprise network design application. Led quality improvement process including code reviews.  Technical Lead of development team for the Enterprise product. Adapted existing APIs to work in a client server environment using Oracle.  Primary developer for the COM API used by network design products. Enhanced core APIs using C++ and Rational Rose.
-Sr Software Engineer, Biztravel; Somerville, MA — Apr 1998-Sep 1998
-Developed software in C++  and Perl for an internet travel reservation system running on Windows NT and Oracle.  Developed application software, customer reservation system interfaces, and operations tools. 
-Sr Software Engineer, Corechange; Boston, MA — Jan 1997- Apr 1998
-Developed a role-based desktop customization application using C++, DCOM, Win32 APIs and ATL. Worked with deployment teams to develop product requirements and to provide custom solutions. Assisted QA team with test planning. Improved requirements process, and mentored junior staff.
-Sr Software Engineer, Optimax — Feb 1996-Dec 1996
-Developed genetic algorithm based manufacturing scheduling applications using Microsoft Access and Visual Basic under Windows and HPUX using VBA, MS Access, C++ and a proprietary constraint language. Maintained and extended the C++ scheduling toolkit. Designed database schemas to store constraint and scheduling data. Served as Project Manager for vehicle paint scheduling application, delivering application into production and engaging the customer to develop requirements and provide support and enhancements. Wrote a prototype Available-To-Promise system in Java.
-Software EnginEer, MIT Center For Space Research; Cambridge, MA — Jun 1992-Jan 1996
-Developed real-time data analysis and satellite monitoring software in C++, TCL, and Perl on Unix (Ultrix, SunOS4, Solaris2) for the Rossi-XTE satellite under tight deadlines and rapidly changing requirements to analyze and archive real- time data. Designed and promoted a C++ framework for handling telemetry used by teams at 3 sites. Performed support tasks, including, developing and maintaining the SCM system across project locations. Supervised graduate and undergraduate students who developed tools to support our work.
-Software Engineer, Kodak Boston Tech Center — May 1990-Feb 1992
-Developed Photo CD applications using C++, X11/Motif, on Unix (SunOS). Technical liaison between Boston and Rochester development teams. Worked on user interface, and framework and image processing APIs
-Technical Support Rep, Systems Center; Waltham, MA— Jan 1989-Apr 1990
-Supported and tested products that managed and optimized DB2 applications running under MVS/TSO. Assisted customers in technical evaluation of products, resolved customer problems involving database design and optimization, and product customization, and wrote tools for customer and internal use. Trained support representatives in MA, VA, and UK offices.
+Technical Lead and Scrum Master for Digital Archives application (J2EE / Spring). Supported testing and build tools. 
+Technical Lead, Message Archiving Project  (Java and Perl).  Improved deployments with QA and ops.
+Steve Berczuk & Associates 	(Consulting and Contract Work)	Aug 2002-Jun 2004
+Contract Developer,  Perceptive Informatics (Waltham MA)	February 2004 – June 2004: Member of a 3 person team developing a web application interface to configure the database for an IVR system for clinical trials in Java.
+Consultant for  Aliaswire, Inc. (Boston MA) August 2003 – February 2004 : Developed software, improved automated testing and managed projects for a bill presentment and payment system startup using Java, and VXML.
+Independent Consulting  August 2002 – August 2003:  Wrote for an assortment of technical publications, short consulting engagements around build and release management, helped bootstrap Silverlink Communications.
+Skyva International (Medford, MA)	Developer	Jun 2001-Aug 2002
+Developed Java applications for business process modeling, and service management applications using Java & Oracle. Improved agile development. Wrote ANT scripts & supported the build and configuration management processes.
+Laid off Aug 15, 2002. Skyva was acquired by ABB International in 2002. 
+iPhrase Technologies (Cambridge, MA)	Principal Software Engineer	Oct 2000-May 2001
+Developed software and test tool in Python, Java, and C++ for a natural language web search engine. Introduced agile development.  Supervised an engineer, planned releases, defined requirements, supported customer deployments. .
+Laid off May 2001.
+Verbind (Boston/Lexington, MA)	Senior Software Engineer	Jul 1999-Oct 2000
+Developed software in C++ for a Customer Relationship Management System.  Technical lead for audience selection and message delivery platform. Supervised 1 engineer.  Improved agile process, including build, release and SCM.
+Left in advance of a layoff and to pursue more challenging work. Verbind was acquired by SAS in 2002.
+NetSuite Development Corporation (Concord, MA) Sr Software Engineer	Oct 1998-Jul 1999
+Developed Software in C++ and Visual Basic for an enterprise network design application. Led quality improvement process.  Technical lead for new features team. Primary developer for the network design COM API.
+Netsuite has since been acquired by Visionael Corp.
+Biztravel.com (Somerville, MA)	Sr Software Engineer	Apr 1998-Sep 1998
+Developed software in C++ for an internet travel reservation system running on Windows NT.  Designed and developed interfaces to the customer reservation system and operations support tools in Perl and C++.
+Laid off September 1998. Biztravel has since been acquired by Rosenbluth International.
+Corechange, Inc (Boston, MA)	Sr Software Engineer	Jan 1997-Apr 1998
+Developed software for a client-server organizational management application in C++ under Windows, using C++, DCOM and  Win32 APIs.  Assisted with test planning, requirements process, and mentoring junior staff.
+Left in advance of a layoff. Corechange has since been acquired by Open Text.
+Optimax Systems Inc (Cambridge, MA)	Sr Software Engineer	Feb1996-Dec 1996
+Developed genetic algorithm based manufacturing scheduling applications ( Windows and Unix) using VBA, MS Access, C++ and a proprietary constraint language. Maintained and extended the scheduling toolkit.  Project Manager and Developer for a vehicle paint scheduling application.
+Once my client project was done I left to pursue work emphasizing programming in C++.
+MIT Center for Space Research(Cambridge, MA) Software Tools Engineer	Jun 1992-Jan 1996
+Developed real-time data analysis and monitoring software (application and framework) in C++, TCL, and Perl (Unix) for the Rossi-XTE satellite. Developed the cross-site SCM system. Supervised students (graduate & undergraduate).
+Eastman Kodak Boston Tech Center(Billerica, MA) Software Engineer	May 1990-Feb 1992
+Developed Photo CD photographic applications (user interface, application and framework, and image processing APIs) using C++, X11/Motif, on Unix. Technical liaison between Boston and Rochester development teams. 
+Laid off Feb 1992.
+Systems Center, Inc. (Waltham, MA)	Technical Support Rep	Jan 1989-Apr 1990
+Supported and tested DB2(MVS) management and optimization application.  Supported pre-sales technical evaluations, resolved post-sales database design, optimization, and customization problems, wrote tools for customer and internal use. Trained support representatives in MA,  VA, and UK offices.
+Left to pursue work as a programmer.
 Education
-Stanford University, Stanford CA — MS Operations Research, June 1988
-Massachusetts Institute of Technology — SB Electrical Engineering, June 1987
-Skills
-Technology: Java, Flex, Python, Bash, Oracle, C++,
-Tools: SVN, Eclipse, Oracle, Jira, Confluence
-Methods: Agile software development and release management, Certified Scrum Master. Frequent author and presenter on agile software development processed.
+Stanford University. Stanford, CA:  Master of Science in Operations Research 			 	June 1988
+Massachusetts Institute of Technology.  Cambridge MA:  SB in Electrical Engineering Background 		June 1987
 Background
-Graduate of Stuyvesant High School in New York City. My professional interests include software patterns, team dynamics, and agile software development More information about my interests and current projects is on my web site: www.berczuk.com.
-Member of ACM, IEEE, and Computer Professionals for Social Responsibility. Participate in the Boston Agile Bazaar. Author of the book (Nov 2002) Software Configuration Management Patterns: Practical Teamwork, Effective Integration. Active in OOPSLA and Agile Software Development communities. Columnist for CM Crossroads (www.cmcrossroads.com). Participate in Boston Agile Bazaar. Presenter at Agile Conference (2004-2007), SD Best Practices (2004-2007), and Agile Development Practices (2008).
-
+Graduate of Stuyvesant High School in New York City. My professional interests include software patterns, team dynamics, and agile software development For more information: www.berczuk.com.  Presenter at various conferences and user groups.
 Publications
-Selected Publications. See www.berczuk.com/pubs for a more complete list and for copies.
-Berczuk, S. and Y. Lv (2010). We're All in This Together. IEEE Software, IEEE. 27: 15-18.
-Berczuk, S. (2010). Starting Agile Adoption: Part I -- Quality Assurance. Starting Agile Adoption, Cutter Consortium. Executive Update (First of 3).
-Berczuk, S. (2009). IDEs and Build Scripts. Better Software. 11: 30-33.
-Berczuk, S. (2009). Agile SCM for Testers. Software Test and Performance, Redwood Collaborative Media. 6: 22.
-Berczuk, S. and G. Koch (2008). Knowledge First, then Tools. Software Test and Performance Magazine. 5: 9.
-Berczuk, S. P. (2007). "Feedback Without Fear." Better Software 9(5): 39-40.
-Berczuk, S. (2006). The Team That Walked Through Walls: Overcoming Barriers to Agile SCM
-. Agile Development (The Agile Alliance Newsletter): 10-13.
-Berczuk, S. (2006). Breaking with Tradition. Better Software. 8: 8-11.
-Berczuk, S. P. and B. Appleton (2003). Software configuration management patterns : effective teamwork, practical integration. Boston, Addison-Wesley.
-Berczuk, S. (2003). "Pragmatic Software Configuration Management." IEEE Software 20(2): 15-17.
-Berczuk, S. P. (1996). Organizational Multiplexing: Patterns for Processing Satellite Telemetry with Distributed Teams. Pattern Languages of Program Design. J. Vlissides, J. Coplien and N. Kerth. Reading, MA, Addison-Wesley. 2.
-Berczuk, S. P. (1995). A Pattern for Separating Assembly and Processing. Pattern Languages of Program Design. J. Coplien and D. Schmidt. Reading, MA, Addison-Wesley. 1.
-Berczuk, S. (1994). "Finding Solutions Through Pattern Languages." IEEE Computer 27(12 (Dec. 1994)): 75-76.
-Presentations
-Member of the Program Committee for the 1996 through 2000 Pattern Languages of Programs conference, and Program Chair for the 1998 conference. Participant in patterns workshops including PLoP 1994-1998 and ChiliPLoP 98. Participant in a workshop on Organization Patterns at OOPSLA 1999. Speaker at Agile and Agile Development Practices Conferences, Software Test and Performance,  SD Best Practices, Agile Development,  New England Agile Bazaar and SPIN.  See www.berczuk.com/pubs/ for a more complete list.
-Berczuk S (2009) Tutorial: SCM for Agile Teams at Software Test and Performance Conference.
-Berczuk S (2008) Tutorial: SCM for Agile Teams at class: Getting Agile with Legacy Code at Agile Development Practices Conference.
-Berczuk, S. (2007). Back to Basics: The Role of Agile Principles in Success with an Distributed Scrum Team. Proceedings of the AGILE 2007, IEEE Computer Society: 382-388.
+I have a regular column on Techwell (www.techwell.com/users/steve-berczuk) A complete list of publications is available at www.berczuk.com/pubs.
+Books and Book Chapters
+Berczuk, Stephen with Brad Appleton. Software Configuration Management Patterns: Effective Teamwork, Practical Integration published by Addison-Wesley, November, 2002.
+Berczuk, Stephen P. 1996. “Organizational Multiplexing: Patterns for Processing Satellite Telemetry with Distributed Teams.” In Pattern Languages of Program Design, ed. John Vlissides, James Coplien and Norm Kerth, 2. Reading, MA: Addison-Wesley.
+Berczuk, Stephen P. 1995. “A Pattern for Separating Assembly and Processing.” In Pattern Languages of Program Design, ed. James Coplien and Douglas Schmidt, 1. Reading, MA: Addison-Wesley.
+Selected Articles
+Berczuk, Steve,  “Feedback without Fear” Better Software magazine. May 2007
+Berczuk, Steve, “Breaking with Tradition, Add an Agile Twist to your SCM Process” Better Software Magazine. Feb 2006.
+Berczuk, Steve, “Pragmatic Software Configuration Management,” IEEE Software. March/April 2003.
+Berczuk, Steve, “Software Configuration Management Resources”, a Reference Point article in the January/February 2003 issue of STQE Magazine (Volume 5 # 1).
+Cabrera, Ralph, Brad Appleton, and Steve Berczuk. 1999. Software Reconstruction: Patterns for Reproducing the Build. In Proceedings of the Sixth Annual Conference on Pattern Languages of Program Design. Monticello, IL.
+Berczuk, Stephen P. 1997. Teamwork and Configuration Management. C++ Report 9, no. 7: 28 ff.
+Berczuk, Stephen. 1994. “Finding Solutions through Pattern Languages.” IEEE Computer 27, no. 12 (Dec. 1994): 75-76.
 
-
-
-
-Steve Berczuk (steve@berczuk.com)	
+Summary of Significant Experience
