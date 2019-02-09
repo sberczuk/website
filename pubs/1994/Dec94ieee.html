@@ -1,0 +1,228 @@
+<TITLE>
+Finding solutions through pattern languages
+</TITLE>
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+<p>
+Computer, Vol. 27,  No. 12, December 1994
+
+<p>
+<STRONG>HOT TOPICS</STRONG>
+
+<p>
+<H4>
+Finding solutions through pattern languages
+</H4>
+<p>
+<A href="http://world.std.com/~berczuk/">Steve Berczuk</a>, MIT Center for Space Research
+<br>Current Address:
+<ADDRESS>
+<a href="mailto:berczuk@acm.org"> berczuk@acm.org </a>
+</ADDRESS>
+<BR>
+<!--
+<script language=JavaScript src="./contact.js" type="application/x-javascript")
+</script>
+-->
+<br>
+
+<p>
+Interest in patterns and pattern languages has been on the
+upswing, fueled by the realization among software developers that
+they must simplify the process of building increasingly large and
+complex systems. Patterns are forms for describing architectural
+constructs in a manner that emphasizes these constructs' potential
+for reuse. They provide a way to document and share design
+expertise in an application-independent fashion. As evidence of
+this growing interest, early in August more than 70 software
+practitioners gathered to discuss patterns and pattern languages
+at the first annual conference on Pattern Languages of Programs.
+
+<p>
+The idea of using patterns and pattern languages is borrowed from
+work done in building architecture to describe qualities for good
+architectural designs. In the seventies, the architect Christopher
+Alexander started using pattern languages to describe the events
+and forms that appeared in cities, towns, and buildings in the
+world at large. Alexander's pattern language is "a system which
+allows its users to create an infinite variety of those . . .
+combinations of patterns which we call buildings, gardens, and
+towns." [1] Alexander defines a pattern as "a rule which describes
+what you have to do to generate the entity which it defines." [1]
+A pattern describes a solution to a problem in an environment "in
+such a way that you can use this solution a million times over,
+without ever doing it the same way twice." [2] Alexander documents
+patterns that exist all around us; for example, each building is
+unique, yet all buildings share many features.
+
+<p>
+One of Alexander's patterns is called "Master and Apprentices." It
+describes how to arrange workspaces so that new employees can
+learn by being in proximity to their mentors and use day-to-day
+experiences as a training mechanism. Although the advantages of
+having trainees learn from the daily work environment may seem
+obvious, in many organizations the office setup does not encourage
+this. Documenting this pattern, and referring to it when designing
+offices, helps a less experienced architect build a quality
+workplace.
+
+<p>
+Software development presents an analogous situation.
+Independently developed software systems often share common
+elements of an architectural structure. An example of a low-level
+pattern in C++ is checking for a nonnull pointer after allocating
+an object with new (this could also be called an "idiom" [3]).
+Most programs do this, and ones that don't are likely to run into
+problems. An example of a higher level pattern is the use of
+callbacks to initiate an operation when an event happens. Higher
+still are patterns of structure in software development
+organizations. [4] These patterns are discovered by experience. By
+documenting these patterns and their relationships, we can develop
+a set of languages to guide developers in building new systems.
+
+<p>
+The connection between Alexander's patterns and software
+architecture has led many in the software community to argue for a
+higher-level organizing principle in software than that of
+objects. Much recent discussion logically centers on objectoriented 
+design, where it is natural to discuss interactions
+between entities. Yet patterns have uses in other paradigms, and
+people are beginning to propose patterns that apply to shell
+scripts and other procedural systems.
+
+<p>
+An Alexandrian pattern consists of the following components: [2]
+
+<UL>
+  <LI> A name, which describes briefly what the pattern
+     accomplishes within certain larger patterns.
+
+  <LI> A concise problem statement.
+
+  <LI> The body of the problem, including the motivation for the
+     pattern and the forces involved in resolving the problem.
+
+  <LI> A solution, preferably stated in the form of an instruction.
+
+  <LI> A discussion of how the pattern relates to other patterns in
+     the language.
+
+</UL>
+<p>
+We can create a similar form using patterns to document software
+frameworks [5] and architectures. A pattern language is a set of
+patterns that guide an architect through a design. Each pattern is
+a description of a solution to a problem using other patterns that
+occur in the system. The details of the form vary, but the
+essential elements are context, problem, and solution.
+
+<p>
+Figure 1 contains a simple example of a pattern. Notice that the
+callback mechanism described here is similar to the callback
+mechanism used by window managers to connect events to user
+events. This illustrates the power of patterns. They describe the
+static and dynamic structures that occur in a variety of software
+systems in a manner that emphasizes common aspects that make the
+pattern applicable across domains. (The Proceedings of the First
+Conference on Pattern Languages [6] contains more involved
+examples of patterns.)
+
+<p>
+Alexander's pattern language contains over 250 patterns, organized
+from high level to low level. The goal in documenting patterns
+that exist in software architectures is to arrive at a similar
+system, but this will take time. When we begin to document
+patterns, smaller and larger ones will be discovered, so the
+context cannot always immediately be specified entirely in terms
+of existing patterns. But we can ultimately specify context by
+discussing the situation that surrounds the problem.
+
+<p>
+Pattern languages are a useful medium for documenting software
+architectures. Unlike other ways of describing the design, a
+pattern by definition describes the motivation surrounding the
+decision to use a particular solution, including the context and
+forces influencing the design. Patterns are often independent of
+the implementation language and can be used to describe
+connections between components.
+
+<p>
+Why use patterns? The pattern form is well suited to documenting
+design techniques. Unlike a design document, a pattern reflects
+something that has been used in a number of situations and thus
+has some generality. It has a context, which explains the intent
+of the pattern and suggests how it is to be used. Patterns also
+express solutions in ways that allow for some variation depending
+on the details of a circumstance. Finally, patterns can express
+architectural considerations independent of language and design
+methodology.
+
+<p>
+A designer wishing to use patterns can take a number of
+approaches. One is to compile patterns from a domain into a book
+and hand it to system architects. Another is to develop a system
+to catalog these patterns and use a tool to extract a pattern
+appropriate to the problem at hand. While a system of patterns (a
+language) is the ultimate goal, there are many stand-alone
+patterns that can and should be documented.
+
+<p>
+Although patterns are often discovered during design, and using a
+pattern language will aid design, writing patterns is not part of
+a design methodology. Patterns are discovered from experience.
+Writing the patterns found in an application helps future
+developers of similar applications integrate the key architectural
+components.
+
+<p>
+Patterns exist in our software. When they are documented, design
+wisdom can be leveraged by other projects in your company.
+
+
+<p>
+References<BR>
+
+ <P>
+[1.]  C. Alexander, 
+ <EM>The Timeless Way of Building</EM>, Oxford
+      University Press, New York, 1979.
+ <P>
+[2.]  C. Alexander et al., <EM>A Pattern Language: Towns, Buildings,
+      Construction</EM>, Oxford University Press, New York, 1977.
+ <P>
+[3.]  J. Coplien,<EM> Advanced C++ Programming Styles and Idioms</EM>,
+      Addison Wesley, Reading, Mass., 1992.
+ <P>
+[4.]  J. Coplien, <A HREF="http://www.research.att.com:80/orgs/ssr/people/cope/Patterns/Process/">"A Development Process Generative Pattern
+      Language,"</A> in <A HREF="http:
+	//www.research.att.com/orgs/ssr/book/PLoP94/">
+	<EM>Pattern Languages of Program Design</EM></A>
+	 Addison Wesley, Reading, Mass.,  May 1995.
+ <P>
+[5.]  R. Johnson, 
+	<A HREF="ftp://st.cs.uiuc.edu/pub/patterns/papers/documenting-frameworks.ps">
+	"Documenting Frameworks Using Patterns"</A>,
+	 Proc. OOPSLA, ACM Press, New York, 1992.
+ <P>
+[6.]  J Coplien and D. Schmidt, eds. <A HREF="http:
+	//www.research.att.com/orgs/ssr/book/PLoP94/">
+	<EM>Pattern Languages of Program Design</EM></A>
+	 Addison Wesley, Reading, Mass.,  May 1995.
+<P>
+This <A HREF="Dec94ieee2.html"> Sidebar </A> contains more pointers to information about patterns.
+
+<p>
+(<em>Orignial contact Info:</em> -- email address is still current)
+Steve Berczuk is a software engineer at the <A HREF="http://space.mit.edu/">
+MIT Center for Space Research</A>. He can be contacted at the 
+MIT Center for Space
+Research, Room 37-561, 77 Massachusetts Avenue, Cambridge, MA
+02193; e-mail <a href="mailto:berczuk@acm.org">berczuk@acm.org</a>.
+
+<A NAME="1"><H6></H6></A>
+
+</BODY>
+</HTML>
+
