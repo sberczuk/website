@@ -1,0 +1,36 @@
+[
+  {
+    "date": "December 2016",
+    "parsedDate": "2016.12.01",
+    "kind": "Book Chapter",
+    "description": "2 chapters",
+    "title": "97 Things Every Programmer Should Know: Collective Wisdom from the Experts",
+    "publication": "97 Things Every Programmer Should Know",
+    "pubLink": "http://www.amazon.com/gp/product/0596809484?ie=UTF8&tag=steveberczuk&linkCode=as2&camp=1789&creative=390957&creativeASIN=0596809484",
+    "documentLink": ""
+  },
+  {
+    "date": "December 2016",
+    "parsedDate": "2016.12.01",
+    "kind": "Article",
+    "theme": "From Agile Requirements to Agile Code",
+    "description": "2 chapters",
+    "author": "",
+    "coauthors": "",
+    "title": "97 Things Every Programmer Should Know: Collective Wisdom from the Experts",
+    "publication": "97 Things Every Programmer Should Know",
+    "pubLink": "http://www.cutter.com/content/project/fulltext/updates/2012/apmu1205.html",
+    "documentLink": ""
+  },
+  {
+    "date": "December 2016",
+    "parsedDate": "2016.12.01",
+    "kind": "Article",
+    "theme": "From Agile Requirements to Agile Code",
+    "description": "2 chapters",
+    "title": "97 Things Every Programmer Should Know: Collective Wisdom from the Experts",
+    "publication": "97 Things Every Programmer Should Know",
+    "pubLink": "http://www.cutter.com/content/project/fulltext/updates/2012/apmu1205.html",
+    "documentLink": ""
+  }
+]
