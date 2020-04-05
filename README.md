@@ -5,7 +5,10 @@ My personal Web Site http://www.berczuk.com
 
 
 # Updating
-rsync -a website/ user@host:path_to_home/public_html
+From the project directory run
+` rsync -av --exclude='.*/' .  sberczuk2014@www.berczuk.com:~/public_html`
+
+use the `-n` option to preview which files will be updated.
 
 # Dev
 
